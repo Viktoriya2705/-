@@ -11,14 +11,39 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <link rel="stylesheet" href="./style/all.css">
+    <link rel="stylesheet" href="./style/all.css" />
     <link rel="stylesheet" href="./style/artists.css" />
   </head>
   <body>
     <!-- Шапка сайта -->
     <header>
       <div class="container header-container">
-        <a href="index.html" class="logo"><img src="./img/Group 1.svg" alt="hbsh" class="photo">РЕСТИЖ<span>.</span></a>
+        <a href="index.html" class="logo"
+          ><svg
+            class="logo__image"
+            width="160"
+            height="214"
+            viewBox="0 0 160 214"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              x="7.5"
+              y="7.5"
+              width="36"
+              height="199"
+              stroke="black"
+              stroke-width="15"
+            />
+            <line y1="7.5" x2="160" y2="7.5" stroke="black" stroke-width="15" />
+            <line
+              x1="152.5"
+              y1="214"
+              x2="152.5"
+              y2="3"
+              stroke="black"
+              stroke-width="15"
+            /></svg>РЕСТИЖ<span>.</span></a>
 
         <button class="mobile-menu-btn">
           <i class="fas fa-bars"></i>
@@ -29,10 +54,15 @@
             <li><a href="index.html">Главная</a></li>
             <li><a href="index.html#about">О галерее</a></li>
             <li><a href="exhibitions.html">Выставки</a></li>
-            <li><a href="artists.html" class="active">Художники</a></li>
+            <li><a href="artists.html" class="a_active">Художники</a></li>
             <li><a href="index.html#events">Мероприятия</a></li>
             <li><a href="blog.html">Блог</a></li>
             <li><a href="index.html#contacts">Контакты</a></li>
+            <li>
+              <button class="dark-mode-toggle" aria-label="Переключить тему">
+                <i class="fas fa-moon"></i>
+              </button>
+            </li>
           </ul>
         </nav>
       </div>
@@ -43,39 +73,36 @@
       <div class="container">
         <h1 class="section-title">Наши художники</h1>
 
-        <!-- Фильтры -->
-        <div class="artist-filters">
-          <button class="filter-btn active">Все</button>
-          <button class="filter-btn">Живопись</button>
-          <button class="filter-btn">Скульптура</button>
-          <button class="filter-btn">Фотография</button>
-          <button class="filter-btn">Цифровое искусство</button>
-          <button class="filter-btn">Инсталляции</button>
+        <!-- Табы -->
+        <div class="artist-tabs">
+          <button class="tab-btn active" data-tab="russia">Россия</button>
+          <button class="tab-btn" data-tab="usa">США</button>
+          <button class="tab-btn" data-tab="france">Франция</button>
         </div>
 
         <!-- Сетка художников -->
         <div class="artists-grid">
-          <!-- Художник 1 -->
-          <div class="artist-card">
+          <!-- Художник: Россия -->
+          <div class="artist-card" data-tab="russia">
             <div class="artist-image">
               <img
-                src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-                alt="Алексей Петров"
+                src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80 "
+                alt="София Леруа"
               />
             </div>
             <div class="artist-info">
-              <h3 class="artist-name">Алексей Петров</h3>
+              <h3 class="artist-name">София Леруа</h3>
               <div class="artist-country">Россия</div>
               <div class="artist-style">Абстрактная живопись</div>
               <a href="artist-detail.html" class="btn">Портфолио</a>
             </div>
           </div>
 
-          <!-- Художник 2 -->
-          <div class="artist-card">
+          <!-- Художник: Россия -->
+          <div class="artist-card" data-tab="russia">
             <div class="artist-image">
               <img
-                src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-1.2.1&auto=format&fit=crop&w=633&q=80"
+                src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-1.2.1&auto=format&fit=crop&w=633&q=80 "
                 alt="Мария Смирнова"
               />
             </div>
@@ -87,11 +114,43 @@
             </div>
           </div>
 
-          <!-- Художник 3 -->
-          <div class="artist-card">
+          <!-- Художник: Россия -->
+          <div class="artist-card" data-tab="russia">
             <div class="artist-image">
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80 "
+                alt="Джон Смит"
+              />
+            </div>
+            <div class="artist-info">
+              <h3 class="artist-name">Михаил Иванов</h3>
+              <div class="artist-country">Россия</div>
+              <div class="artist-style">Фотография</div>
+              <a href="artist-detail.html" class="btn">Портфолио</a>
+            </div>
+          </div>
+
+          <!-- Художник: Россия -->
+          <div class="artist-card" data-tab="russia">
+            <div class="artist-image">
+              <img
+                src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80 "
+                alt="Юлия Ветрова"
+              />
+            </div>
+            <div class="artist-info">
+              <h3 class="artist-name">Юлия Ветрова</h3>
+              <div class="artist-country">Россия</div>
+              <div class="artist-style">Текстильные инсталляции</div>
+              <a href="artist-detail.html" class="btn">Портфолио</a>
+            </div>
+          </div>
+
+          <!-- Художник: США -->
+          <div class="artist-card" data-tab="usa">
+            <div class="artist-image">
+              <img
+                src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80 "
                 alt="Джон Смит"
               />
             </div>
@@ -103,95 +162,37 @@
             </div>
           </div>
 
-          <!-- Художник 4 -->
-          <div class="artist-card">
+          <!-- Художник: Франция -->
+          <div class="artist-card" data-tab="france">
             <div class="artist-image">
               <img
-                src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-                alt="София Леруа"
+                src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80 "
+                alt="Алексей Петров"
               />
             </div>
             <div class="artist-info">
-              <h3 class="artist-name">София Леруа</h3>
+              <h3 class="artist-name">Алексей Петров</h3>
               <div class="artist-country">Франция</div>
               <div class="artist-style">Скульптура</div>
               <a href="artist-detail.html" class="btn">Портфолио</a>
             </div>
           </div>
 
-          <!-- Художник 5 -->
-          <div class="artist-card">
+          <!-- Художник: Франция -->
+          <div class="artist-card" data-tab="france">
             <div class="artist-image">
               <img
-                src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-                alt="Михаил Иванов"
-              />
-            </div>
-            <div class="artist-info">
-              <h3 class="artist-name">Михаил Иванов</h3>
-              <div class="artist-country">Россия</div>
-              <div class="artist-style">Фотография</div>
-              <a href="artist-detail.html" class="btn">Портфолио</a>
-            </div>
-          </div>
-
-          <!-- Художник 6 -->
-          <div class="artist-card">
-            <div class="artist-image">
-              <img
-                src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-                alt="Анна Ковалева"
-              />
-            </div>
-            <div class="artist-info">
-              <h3 class="artist-name">Анна Ковалева</h3>
-              <div class="artist-country">Россия</div>
-              <div class="artist-style">Графика</div>
-              <a href="artist-detail.html" class="btn">Портфолио</a>
-            </div>
-          </div>
-
-          <!-- Художник 7 -->
-          <div class="artist-card">
-            <div class="artist-image">
-              <img
-                src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80 "
                 alt="Карлос Санчес"
               />
             </div>
             <div class="artist-info">
               <h3 class="artist-name">Карлос Санчес</h3>
-              <div class="artist-country">Испания</div>
+              <div class="artist-country">Франция</div>
               <div class="artist-style">Стрит-арт</div>
               <a href="artist-detail.html" class="btn">Портфолио</a>
             </div>
           </div>
-
-          <!-- Художник 8 -->
-          <div class="artist-card">
-            <div class="artist-image">
-              <img
-                src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-                alt="Юлия Ветрова"
-              />
-            </div>
-            <div class="artist-info">
-              <h3 class="artist-name">Юлия Ветрова</h3>
-              <div class="artist-country">Россия</div>
-              <div class="artist-style">Текстильные инсталляции</div>
-              <a href="artist-detail.html" class="btn">Портфолио</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Пагинация -->
-        <div class="pagination">
-          <a href="#" class="page-link"><i class="fas fa-chevron-left"></i></a>
-          <a href="#" class="page-link active">1</a>
-          <a href="#" class="page-link">2</a>
-          <a href="#" class="page-link">3</a>
-          <a href="#" class="page-link">4</a>
-          <a href="#" class="page-link"><i class="fas fa-chevron-right"></i></a>
         </div>
       </div>
     </main>
@@ -252,13 +253,11 @@
 
         <div class="copyright">
           <p>
-            &copy; 2023 Галерея современного искусства "Престиж". Все права
+            &copy; 2025 Галерея современного искусства "Престиж". Все права
             защищены.
           </p>
         </div>
       </div>
     </footer>
-
-    <script src="script.js"></script>
   </body>
 </html>

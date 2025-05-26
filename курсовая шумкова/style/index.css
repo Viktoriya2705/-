@@ -7,31 +7,32 @@
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("https://images.unsplash.com/photo-1578926375605-eaf7559b1458?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")
       no-repeat center center/cover;
-  height: 100vh;                     /* На всю высоту экрана */
+  height: 100vh; /* На всю высоту экрана */
   display: flex;
-  align-items: center;               /* Вертикальное центрирование */
-  color: var(--secondary);           /* Белый текст */
-  text-align: center;                /* Центрирование текста */
-  margin-top: 80px;                  /* Отступ для фиксированной шапки */
+  align-items: center; /* Вертикальное центрирование */
+  text-align: center; /* Центрирование текста */
+  margin-top: 80px; /* Отступ для фиксированной шапки */
 }
 
 /* Контейнер для контента баннера */
 .hero-content {
-  max-width: 800px;                  /* Ограничение ширины текста */
-  margin: 0 auto;                    /* Центрирование */
-  padding: 0 20px;                   /* Отступы по бокам */
+  max-width: 800px; /* Ограничение ширины текста */
+  margin: 0 auto; /* Центрирование */
+  padding: 0 20px; /* Отступы по бокам */
 }
 
 /* Заголовок баннера */
 .hero h1 {
-  font-size: 3.5rem;                 /* Очень крупный текст */
-  margin-bottom: 20px;               /* Отступ снизу */
+  color: #fff;
+  font-size: 3.5rem; /* Очень крупный текст */
+  margin-bottom: 20px; /* Отступ снизу */
 }
 
 /* Текст баннера */
 .hero p {
-  font-size: 1.2rem;                 /* Увеличенный размер текста */
-  margin-bottom: 30px;               /* Отступ снизу */
+  color: #fff;
+  font-size: 1.2rem; /* Увеличенный размер текста */
+  margin-bottom: 30px; /* Отступ снизу */
 }
 
 /* ====================== */
@@ -39,282 +40,243 @@
 /* ====================== */
 
 .about {
-  padding: 80px 40px;                /* Внутренние отступы */
+  padding: 80px 40px; /* Внутренние отступы */
   background-color: var(--secondary); /* Белый фон */
 }
 
 /* Контейнер с контентом (текст + видео) */
 .about-content {
   display: flex;
-  align-items: center;               /* Выравнивание по вертикали */
-  gap: 50px;                        /* Расстояние между блоками */
+  align-items: center; /* Выравнивание по вертикали */
+  gap: 50px; /* Расстояние между блоками */
 }
 
 /* Текстовая часть */
 .about-text {
-  flex: 1;                          /* Занимает доступное пространство */
+  flex: 1; /* Занимает доступное пространство */
 }
-
+.about-text p {
+  margin-bottom: 10px;
+}
 /* Контейнер для видео */
 .about-video {
-  flex: 1;                          /* Занимает доступное пространство */
-  border-radius: 8px;               /* Скругленные углы */
-  overflow: hidden;                 /* Обрезка выходящего за границы контента */
+  flex: 1; /* Занимает доступное пространство */
+  border-radius: 8px; /* Скругленные углы */
+  overflow: hidden; /* Обрезка выходящего за границы контента */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Тень для объема */
 }
 
 /* Само видео */
 .about-video video {
-  width: 100%;                      /* На всю ширину контейнера */
-  height: auto;                     /* Сохранение пропорций */
-  display: block;                   /* Устранение лишних отступов */
+  width: 100%; /* На всю ширину контейнера */
+  height: auto; /* Сохранение пропорций */
+  display: block; /* Устранение лишних отступов */
 }
 /* ====================== */
 /* === Слайдер событий === */
 /* ====================== */
+/* Стили для слайдера событий */
+.events-slider {
+  width: 100%;
+  margin: 30px auto;
+  padding: 0 20px;
+}
 
+.event-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+}
+
+.event-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.event-info {
+  padding: 20px;
+  color: var(--primary);
+}
+
+.event-date {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.event-title {
+  color: var(--primary);
+  margin: 0 0 10px 0;
+  font-size: 18px;
+}
+
+.event-info p {
+  color: var(--primary);
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Стили для точек навигации */
+
+
+.slick-dots li button:before {
+  font-size: 12px;
+  color: var(--accent);
+}
+
+.slick-dots li.slick-active button:before {
+  color: var(--accent);
+}
+
+/* Стили для стрелок */
+.slick-prev:before,
+.slick-next:before {
+  color: var(--accent);
+  font-size: 24px;
+}
+
+.slick-prev {
+  left: -25px;
+}
+
+.slick-next {
+  right: -25px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .slick-prev {
+    left: -15px;
+  }
+
+  .slick-next {
+    right: -15px;
+  }
+}
 .events {
-  padding: 80px 0;                  /* Внутренние отступы */
+  padding: 80px 0; /* Внутренние отступы */
   background-color: var(--light-gray); /* Светло-серый фон */
 }
 
 /* Контейнер слайдера */
+
 .events-slider {
   display: flex;
-  gap: 30px;                        /* Расстояние между карточками */
-  overflow-x: auto;                 /* Горизонтальная прокрутка */
-  padding: 20px 0;                  /* Отступы сверху и снизу */
-  scroll-snap-type: x mandatory;    /* Привязка прокрутки к карточкам */
+  gap: 30px; /* Расстояние между карточками */
+  padding: 20px 0; /* Отступы сверху и снизу */
+  scroll-snap-type: x mandatory; /* Привязка прокрутки к карточкам */
 }
 
 /* Карточка события */
 .event-card {
-  min-width: 300px;                 /* Минимальная ширина карточки */
+  min-width: 300px; /* Минимальная ширина карточки */
   background-color: var(--secondary); /* Белый фон */
-  border-radius: 8px;               /* Скругленные углы */
-  overflow: hidden;                 /* Обрезка выходящего за границы контента */
+  border-radius: 8px; /* Скругленные углы */
+  overflow: hidden; /* Обрезка выходящего за границы контента */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Тень для объема */
-  scroll-snap-align: start;         /* Привязка к началу при прокрутке */
+  scroll-snap-align: start; /* Привязка к началу при прокрутке */
 }
 
 /* Контейнер для изображения события */
 .event-image {
-  height: 200px;                    /* Фиксированная высота */
-  overflow: hidden;                 /* Обрезка выходящего за границы контента */
+  height: 200px; /* Фиксированная высота */
+  overflow: hidden; /* Обрезка выходящего за границы контента */
 }
 
 /* Изображение события */
 .event-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;                /* Заполнение контейнера с сохранением пропорций */
-  transition: transform 0.5s ease;  /* Плавное увеличение при наведении */
+  object-fit: cover; /* Заполнение контейнера с сохранением пропорций */
+  transition: transform 0.5s ease; /* Плавное увеличение при наведении */
 }
 
 /* Эффект увеличения при наведении */
 .event-card:hover .event-image img {
-  transform: scale(1.1);            /* Увеличение на 10% */
+  transform: scale(1.1); /* Увеличение на 10% */
 }
 
 /* Информация о событии */
 .event-info {
-  padding: 20px;                    /* Внутренние отступы */
+  padding: 20px; /* Внутренние отступы */
 }
 
 /* Дата события */
 .event-date {
-  color: var(--accent);             /* Золотой цвет */
-  font-weight: 600;                 /* Полужирное начертание */
-  margin-bottom: 10px;              /* Отступ снизу */
+  color: var(--accent); /* Золотой цвет */
+  font-weight: 600; /* Полужирное начертание */
+  margin-bottom: 10px; /* Отступ снизу */
 }
 
 /* Заголовок события */
 .event-title {
-  font-size: 1.3rem;                /* Размер шрифта */
-  margin-bottom: 10px;              /* Отступ снизу */
+  font-size: 1.3rem; /* Размер шрифта */
+  margin-bottom: 10px; /* Отступ снизу */
 }
 
-/* ====================== */
-/* === Форма подписки === */
-/* ====================== */
 
-.newsletter {
-  padding: 60px 0;                  /* Внутренние отступы */
-  background-color: var(--dark-accent); /* Темно-синий фон */
-  color: var(--secondary);          /* Белый текст */
-  text-align: center;               /* Центрирование текста */
-}
-
-/* Заголовок формы (переопределение цвета) */
-.newsletter h2 {
-  color: var(--secondary);          /* Белый цвет */
-}
-
-.newsletter p {
-  margin-bottom: 20px;
-}
-
-/* Контейнер формы */
-.newsletter-form {
-  max-width: 500px;                 /* Ограничение ширины */
-  margin: 0 auto;                   /* Центрирование */
-  display: flex;
-  gap: 10px;                        /* Расстояние между элементами */
-}
-
-/* Поле ввода email */
-.newsletter-form input {
-  flex: 1;                          /* Занимает доступное пространство */
-  padding: 15px;
-  border: none;
-  border-radius: 4px;               /* Скругленные углы */
-  font-size: 1rem;                  /* Размер шрифта */
-}
-
-/* Кнопка в форме (переопределение стилей) */
-.newsletter-form .btn {
-  background-color: var(--accent);   /* Золотой фон */
-  color: var(--primary);            /* Черный текст */
-}
 
 /* ====================== */
 /* === Секция контактов === */
 /* ====================== */
 
 .contacts {
-  padding: 80px 0;                  /* Внутренние отступы */
+  padding: 80px 0; /* Внутренние отступы */
   background-color: var(--secondary); /* Белый фон */
 }
 
 /* Контейнер с контактами и картой */
 .contacts-container {
   display: flex;
-  gap: 50px;                        /* Расстояние между блоками */
+  gap: 50px; /* Расстояние между блоками */
 }
 
 /* Блок с контактной информацией */
 .contact-info {
-  flex: 1;                          /* Занимает доступное пространство */
+  flex: 1; /* Занимает доступное пространство */
 }
 
 /* Заголовок блока */
 .contact-info h3 {
-  font-size: 1.5rem;                /* Размер шрифта */
-  margin-bottom: 20px;              /* Отступ снизу */
-  color: var(--primary);            /* Черный цвет */
+  font-size: 1.5rem; /* Размер шрифта */
+  margin-bottom: 20px; /* Отступ снизу */
+  color: var(--primary); /* Черный цвет */
 }
 
 /* Элемент контакта (иконка + текст) */
 .contact-item {
   display: flex;
-  align-items: flex-start;          /* Выравнивание по верхнему краю */
-  margin-bottom: 20px;              /* Отступ снизу */
+  align-items: flex-start; /* Выравнивание по верхнему краю */
+  margin-bottom: 20px; /* Отступ снизу */
 }
 
 /* Иконка контакта */
 .contact-icon {
-  margin-right: 15px;               /* Отступ справа */
-  color: var(--accent);             /* Золотой цвет */
-  font-size: 1.2rem;                /* Размер иконки */
+  margin-right: 15px; /* Отступ справа */
+  color: var(--accent); /* Золотой цвет */
+  font-size: 1.2rem; /* Размер иконки */
 }
 
 /* Контейнер для карты */
 .contact-map {
-  flex: 1;                          /* Занимает доступное пространство */
-  height: 400px;                    /* Фиксированная высота */
-  border-radius: 8px;               /* Скругленные углы */
-  overflow: hidden;                 /* Обрезка выходящего за границы контента */
+  flex: 1; /* Занимает доступное пространство */
+  height: 400px; /* Фиксированная высота */
+  border-radius: 8px; /* Скругленные углы */
+  overflow: hidden; /* Обрезка выходящего за границы контента */
 }
 
 /* iframe с картой */
 .contact-map iframe {
   width: 100%;
   height: 100%;
-  border: none;                     /* Убираем границу */
-}
-
-/* ====================== */
-/* === Подвал сайта === */
-/* ====================== */
-
-footer {
-  background-color: var(--primary);  /* Черный фон */
-  color: var(--secondary);          /* Белый текст */
-  padding: 50px 0 20px;   
-  margin-top: 50px;          /* Внутренние отступы (сверху, справа/слева, снизу) */
-}
-
-/* Контейнер для колонок подвала */
-.footer-container {
-  display: flex;
-  justify-content: space-between;    /* Распределение пространства между колонками */
-  margin-bottom: 40px;               /* Отступ снизу */
-}
-
-/* Колонка подвала */
-.footer-col {
-  flex: 1;                          /* Равномерное распределение пространства */
-  padding: 0 20px;                  /* Внутренние отступы по бокам */
-}
-
-/* Заголовок колонки */
-.footer-col h3 {
-  font-size: 1.3rem;                /* Размер шрифта */
-  margin-bottom: 20px;              /* Отступ снизу */
-  color: var(--accent);             /* Золотой цвет */
-}
-
-/* Список в колонке */
-.footer-col ul {
-  list-style: none;                 /* Убираем маркеры списка */
-}
-
-/* Элемент списка */
-.footer-col ul li {
-  margin-bottom: 10px;              /* Отступ снизу */
-}
-
-/* Ссылка в списке */
-.footer-col ul li a {
-  color: var(--secondary);          /* Белый цвет */
-}
-
-/* Ссылка при наведении */
-.footer-col ul li a:hover {
-  color: var(--accent);             /* Золотой цвет */
-}
-
-/* Социальные иконки */
-.social-links {
-  display: flex;
-  gap: 15px;                        /* Расстояние между иконками */
-}
-
-/* Ссылка-иконка */
-.social-links a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background-color: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон */
-  border-radius: 50%;               /* Круглая форма */
-  color: var(--secondary);          /* Белый цвет */
-  font-size: 1.2rem;                /* Размер иконки */
-  transition: all 0.3s ease;        /* Плавные переходы */
-}
-
-/* Иконка при наведении */
-.social-links a:hover {
-  background-color: var(--accent);   /* Золотой фон */
-  color: var(--primary);            /* Черный цвет */
-}
-
-/* Копирайт в подвале */
-.copyright {
-  text-align: center;               /* Центрирование текста */
-  padding-top: 20px;                /* Отступ сверху */
-  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Разделительная линия */
+  border: none; /* Убираем границу */
 }
 
 /* ====================== */
@@ -337,13 +299,13 @@ footer {
 
   /* Перенос колонок подвала */
   .footer-container {
-    flex-wrap: wrap;                /* Разрешаем перенос */
+    flex-wrap: wrap; /* Разрешаем перенос */
   }
 
   /* Ширина колонок подвала */
   .footer-col {
-    flex: 0 0 50%;                  /* 2 колонки в ряд */
-    margin-bottom: 30px;            /* Отступ снизу */
+    flex: 0 0 50%; /* 2 колонки в ряд */
+    margin-bottom: 30px; /* Отступ снизу */
   }
 }
 
@@ -358,17 +320,17 @@ footer {
   nav {
     position: fixed;
     top: 80px;
-    left: -100%;                    /* Скрыто за пределами экрана */
+    left: -100%; /* Скрыто за пределами экрана */
     width: 100%;
-    height: calc(100vh - 80px);     /* На всю высоту минус шапка */
+    height: calc(100vh - 80px); /* На всю высоту минус шапка */
     background-color: var(--secondary); /* Белый фон */
-    transition: all 0.3s ease;      /* Плавное появление */
-    z-index: 999;                   /* Поверх других элементов */
+    transition: all 0.3s ease; /* Плавное появление */
+    z-index: 999; /* Поверх других элементов */
   }
 
   /* Класс для отображения меню */
   nav.active {
-    left: 0;                        /* Показываем меню */
+    left: 0; /* Показываем меню */
   }
 
   /* Вертикальное меню */
@@ -384,6 +346,7 @@ footer {
 
   /* Уменьшение размера заголовка */
   .hero h1 {
+
     font-size: 2.5rem;
   }
 

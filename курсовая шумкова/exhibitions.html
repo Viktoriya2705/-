@@ -55,11 +55,14 @@
           <ul>
             <li><a href="index.html">Главная</a></li>
             <li><a href="index.html#about">О галерее</a></li>
-            <li><a href="exhibitions.html" class="active">Выставки</a></li>
+            <li><a href="exhibitions.html" class="a_active">Выставки</a></li>
             <li><a href="artists.html">Художники</a></li>
             <li><a href="index.html#events">Мероприятия</a></li>
             <li><a href="blog.html">Блог</a></li>
             <li><a href="index.html#contacts">Контакты</a></li>
+            <li><button class="dark-mode-toggle" aria-label="Переключить тему">
+              <i class="fas fa-moon"></i>
+            </button></li>
           </ul>
         </nav>
       </div>
@@ -67,15 +70,11 @@
 
     <!-- Основной контент -->
     <main>
+      <!-- ------------------------------------------------------ -->
       <div class="container">
         <h1 class="section-title">Выставки</h1>
 
-        <!-- Табы -->
-        <div class="exhibition-tabs">
-          <button class="tab-btn active">Текущие</button>
-          <button class="tab-btn">Предстоящие</button>
-          <button class="tab-btn">Архив</button>
-        </div>
+
 
         <!-- Фильтры -->
         <div class="exhibition-filters">
@@ -87,7 +86,7 @@
         <!-- Список выставок -->
         <div class="exhibitions-list">
           <!-- Выставка 1  - Живопись-->
-          <div class="exhibition-card">
+          <div class="exhibition-card" data-type="painting">
             <div class="exhibition-image">
               <img
                 src="https://images.unsplash.com/photo-1578926375605-eaf7559b1458?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
@@ -108,9 +107,8 @@
               <a href="exhibition-detail.html" class="btn">Подробнее</a>
             </div>
           </div>
-
           <!-- Выставка 2 - Живопись-->
-          <div class="exhibition-card">
+          <div class="exhibition-card" data-type="painting">
             <div class="exhibition-image">
               <img src="./img/2 страничка диалог.jpg" alt="Безмолвный диалог" />
             </div>
@@ -126,9 +124,8 @@
               <a href="exhibition-detail.html" class="btn">Подробнее</a>
             </div>
           </div>
-
           <!-- Выставка 3 - Живопись-->
-          <div class="exhibition-card">
+          <div class="exhibition-card" data-type="painting">
             <div class="exhibition-image">
               <img
                 src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
@@ -150,7 +147,7 @@
             </div>
           </div>
           <!-- Выставка 4 - Скульптура -->
-          <div class="exhibition-card">
+          <div class="exhibition-card" data-type="sculpture">
             <div class="exhibition-image">
               <img
                 src="https://images.unsplash.com/photo-1565992441121-4367c2967103?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
@@ -171,9 +168,8 @@
               <a href="exhibition-detail.html" class="btn">Подробнее</a>
             </div>
           </div>
-
           <!-- Выставка 5 - Живопись -->
-          <div class="exhibition-card">
+          <div class="exhibition-card" data-type="painting">
             <div class="exhibition-image">
               <img
                 src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
@@ -194,9 +190,8 @@
               <a href="exhibition-detail.html" class="btn">Подробнее</a>
             </div>
           </div>
-
-          <!-- Выставка 6 - Скульптура -->
-          <div class="exhibition-card">
+          <!-- Выставка 6 - Скульптура  -->
+          <div class="exhibition-card" data-type="sculpture">
             <div class="exhibition-image">
               <img
                 src="https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
@@ -217,9 +212,8 @@
               <a href="exhibition-detail.html" class="btn">Подробнее</a>
             </div>
           </div>
-
           <!-- Выставка 7 - Живопись -->
-          <div class="exhibition-card">
+          <div class="exhibition-card" data-type="painting">
             <div class="exhibition-image">
               <img
                 src="https://images.unsplash.com/photo-1578301978018-3005759f48f7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
@@ -242,9 +236,8 @@
               <a href="exhibition-detail.html" class="btn">Подробнее</a>
             </div>
           </div>
-
           <!-- Выставка 8 - Скульптура и живопись -->
-          <div class="exhibition-card">
+          <div class="exhibition-card" data-type="sculpture painting">
             <div class="exhibition-image">
               <img
                 src="https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
@@ -266,10 +259,10 @@
             </div>
           </div>
           <!-- Выставка 9 - Живопись -->
-          <div class="exhibition-card">
+          <div class="exhibition-card" data-type="painting">
             <div class="exhibition-image">
               <img
-                src="https://images.unsplash.com/photo-1578301978174-9ced228a338a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                src="https://i.pinimg.com/originals/18/bd/e4/18bde4fa6bb7074373fd69070c350470.jpg"
                 alt="Диалог эпох: рембрандтовский свет в современной живописи"
               />
             </div>
@@ -285,14 +278,7 @@
                 Уникальный проект, исследующий влияние техники светотени
                 Рембрандта на современных художников. В экспозиции представлены:
               </p>
-              Кураторский проект доктора искусствоведения А.К. Петрова.
-
-              <div class="exhibition-notes">
-                <p>
-                  В рамках выставки запланированы мастер-классы и лекции по
-                  технике старых мастеров.
-                </p>
-              </div>
+              
               <a href="exhibition-detail.html" class="btn">Подробнее</a>
             </div>
           </div>
@@ -323,7 +309,7 @@
             <ul>
               <li><a href="index.html">Главная</a></li>
               <li><a href="index.html#about">О галерее</a></li>
-              <li><a href="exhibitions.html">Выставки</a></li>
+              <li><a href="exhibitions.html" class="a_active">Выставки</a></li>
               <li><a href="artists.html">Художники</a></li>
               <li><a href="index.html#events">Мероприятия</a></li>
               <li><a href="blog.html">Блог</a></li>
@@ -356,7 +342,7 @@
 
         <div class="copyright">
           <p>
-            &copy; 2023 Галерея современного искусства "Престиж". Все права
+            &copy; 2025 Галерея современного искусства "Престиж". Все права
             защищены.
           </p>
         </div>

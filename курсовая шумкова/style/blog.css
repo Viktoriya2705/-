@@ -144,6 +144,12 @@ main {
     border-radius: 20px;
     font-size: 0.8rem;
 }
+.none{
+    display: none;
+}
+.block{
+    display: block;
+}
 
 /* Пагинация */
 .pagination {

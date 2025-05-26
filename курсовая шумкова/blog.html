@@ -18,7 +18,32 @@
     <!-- Шапка сайта -->
     <header>
       <div class="container header-container">
-        <a href="index.html" class="logo"><img src="./img/Group 1.svg" alt="hbsh" class="photo">РЕСТИЖ<span>.</span></a>
+        <a href="index.html" class="logo"><svg
+          class="logo__image"
+          width="160"
+          height="214"
+          viewBox="0 0 160 214"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            x="7.5"
+            y="7.5"
+            width="36"
+            height="199"
+            stroke="black"
+            stroke-width="15"
+          />
+          <line y1="7.5" x2="160" y2="7.5" stroke="black" stroke-width="15" />
+          <line
+            x1="152.5"
+            y1="214"
+            x2="152.5"
+            y2="3"
+            stroke="black"
+            stroke-width="15"
+          />
+        </svg>РЕСТИЖ<span>.</span></a>
 
         <button class="mobile-menu-btn">
           <i class="fas fa-bars"></i>
@@ -31,8 +56,11 @@
             <li><a href="exhibitions.html">Выставки</a></li>
             <li><a href="artists.html">Художники</a></li>
             <li><a href="index.html#events">Мероприятия</a></li>
-            <li><a href="blog.html" class="active">Блог</a></li>
+            <li><a href="blog.html" class="a_active">Блог</a></li>
             <li><a href="index.html#contacts">Контакты</a></li>
+            <li><button class="dark-mode-toggle" aria-label="Переключить тему">
+              <i class="fas fa-moon"></i>
+            </button></li>
           </ul>
         </nav>
       </div>
@@ -48,10 +76,11 @@
             <!-- Пост 1 -->
             <article class="blog-post">
               <div class="post-image">
-                <img
+                <img class="dark-blog none"
                   src="https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80"
                   alt="Интервью с художником"
                 />
+                <img  class="light-blog" src="https://www.techdonut.co.uk/sites/default/files/itsupport_156116426_0.jpg" alt="Интервью с художником">
               </div>
               <div class="post-content">
                 <div class="post-meta">
@@ -274,13 +303,13 @@
 
         <div class="copyright">
           <p>
-            &copy; 2023 Галерея современного искусства "Престиж". Все права
+            &copy; 2025 Галерея современного искусства "Престиж". Все права
             защищены.
           </p>
         </div>
       </div>
     </footer>
 
-    <script src="script.js"></script>
+
   </body>
 </html>

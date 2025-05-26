@@ -21,42 +21,12 @@ main {
     border-radius: 20px;
     cursor: pointer;
     transition: all 0.3s ease;
+    color: var(--text);
 }
 
 .filter-btn:hover, .filter-btn.active {
     background-color: var(--accent);
     color: var(--primary);
-}
-
-/* Табы выставок */
-.exhibition-tabs {
-    display: flex;
-    border-bottom: 1px solid var(--light-gray);
-    margin-bottom: 30px;
-}
-
-.tab-btn {
-    padding: 15px 25px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    position: relative;
-    font-weight: 600;
-}
-
-.tab-btn:after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 0;
-    height: 3px;
-    background-color: var(--accent);
-    transition: width 0.3s ease;
-}
-
-.tab-btn.active:after, .tab-btn:hover:after {
-    width: 100%;
 }
 
 /* Список выставок */
@@ -113,75 +83,6 @@ main {
 
 .exhibition-description {
     margin-bottom: 20px;
-}
-
-/* Подвал */
-footer {
-    background-color: var(--primary);
-    color: var(--secondary);
-    padding: 50px 0 20px;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
-}
-
-.footer-col {
-    flex: 1;
-    padding: 0 20px;
-}
-
-.footer-col h3 {
-    font-size: 1.3rem;
-    margin-bottom: 20px;
-    color: var(--accent);
-}
-
-.footer-col ul {
-    list-style: none;
-}
-
-.footer-col ul li {
-    margin-bottom: 10px;
-}
-
-.footer-col ul li a {
-    color: var(--secondary);
-}
-
-.footer-col ul li a:hover {
-    color: var(--accent);
-}
-
-.social-links {
-    display: flex;
-    gap: 15px;
-}
-
-.social-links a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    color: var(--secondary);
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
-}
-
-.social-links a:hover {
-    background-color: var(--accent);
-    color: var(--primary);
-}
-
-.copyright {
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Адаптивность */

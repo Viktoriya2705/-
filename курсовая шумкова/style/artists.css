@@ -8,33 +8,50 @@ main {
   min-height: calc(100vh - 300px);   /* Минимальная высота (100vh минус высота шапки и подвала) */
 }
 
-/* ====================== */
-/* === Фильтры художников === */
-/* ====================== */
-
-.artist-filters {
+/* Табы выставок */
+.exhibition-tabs {
   display: flex;
-  justify-content: center;           /* Центрирование фильтров */
-  gap: 15px;                        /* Расстояние между кнопками */
-  margin-bottom: 40px;              /* Отступ снизу */
-  flex-wrap: wrap;                  /* Перенос на новую строку при нехватке места */
+  border-bottom: 1px solid var(--light-gray);
+  margin-bottom: 30px;
 }
 
-/* Кнопка фильтра */
-.filter-btn {
-  padding: 8px 20px;
-  background-color: var(--light-gray); /* Светло-серый фон */
+.tab-btn {
+  padding: 15px 25px;
+  background: none;
   border: none;
-  border-radius: 20px;               /* Скругленные углы (форма "капсулы") */
-  cursor: pointer;                   /* Курсор-указатель */
-  transition: all 0.3s ease;        /* Плавные переходы */
+  cursor: pointer;
+  position: relative;
+  font-weight: 600;
+  color: var(--text);
 }
 
-/* Состояния кнопки фильтра */
-.filter-btn:hover,
-.filter-btn.active {
-  background-color: var(--accent);   /* Золотой фон */
-  color: var(--primary);            /* Черный текст */
+
+
+.artist-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+
+.tab-btn.active {
+  background-color: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.artists-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.artist-card {
+  display: none;
+}
+
+.artist-card.show {
+  display: block;
 }
 
 /* ====================== */
