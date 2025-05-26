@@ -64,3 +64,87 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     });
   });
 });
+
+// модальные окна выставок
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Фильтрация (оставьте ваш существующий код)
+  
+  // Обработка модальных окон
+  const modalBtns = document.querySelectorAll('.btn[href="exhibition-detail.html"]');
+  const modals = document.querySelectorAll('.modal');
+  const closeBtns = document.querySelectorAll('.close-modal');
+  
+  // Открытие модального окна
+  modalBtns.forEach((btn, index) => {
+      btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          const modalId = this.closest('.exhibition-card').getAttribute('data-type') + '-' + (index + 1);
+          const modal = document.getElementById('modal-' + (index + 1));
+          if (modal) {
+              modal.style.display = 'block';
+              document.body.style.overflow = 'hidden'; // Запрет прокрутки фона
+          }
+      });
+  });
+  
+  // Закрытие модального окна
+  closeBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+          this.closest('.modal').style.display = 'none';
+          document.body.style.overflow = 'auto'; // Возврат прокрутки
+      });
+  });
+  
+  // Закрытие при клике вне модального окна
+  window.addEventListener('click', function(e) {
+      if (e.target.classList.contains('modal')) {
+          e.target.style.display = 'none';
+          document.body.style.overflow = 'auto';
+      }
+  });
+  
+  // Закрытие по ESC
+  document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+          modals.forEach(modal => {
+              if (modal.style.display === 'block') {
+                  modal.style.display = 'none';
+                  document.body.style.overflow = 'auto';
+              }
+          });
+      }
+  });
+});
+
+
+ // Навигация между разделами ЛК
+ document.addEventListener('DOMContentLoaded', function() {
+  const menuLinks = document.querySelectorAll('.account-menu a');
+  const sections = document.querySelectorAll('.account-section');
+  
+  menuLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      // Удаляем активный класс у всех ссылок и секций
+      menuLinks.forEach(l => l.classList.remove('active'));
+      sections.forEach(s => s.classList.remove('active'));
+      
+      // Добавляем активный класс к текущей ссылке
+      this.classList.add('active');
+      
+      // Находим соответствующую секцию и делаем её активной
+      const sectionId = this.getAttribute('href').substring(1);
+      document.getElementById(sectionId).classList.add('active');
+    });
+  });
+
+  // Мобильное меню
+  const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+  const nav = document.querySelector('nav');
+  
+  mobileMenuBtn.addEventListener('click', function() {
+    nav.classList.toggle('active');
+  });
+});

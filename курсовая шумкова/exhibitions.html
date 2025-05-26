@@ -47,6 +47,7 @@
           </svg>
           РЕСТИЖ<span>.</span></a
         >
+        
         <button class="mobile-menu-btn">
           <i class="fas fa-bars"></i>
         </button>
@@ -55,14 +56,21 @@
           <ul>
             <li><a href="index.html">Главная</a></li>
             <li><a href="index.html#about">О галерее</a></li>
-            <li><a href="exhibitions.html" class="a_active">Выставки</a></li>
+            <li><a href="exhibitions.html">Выставки</a></li>
             <li><a href="artists.html">Художники</a></li>
             <li><a href="index.html#events">Мероприятия</a></li>
             <li><a href="blog.html">Блог</a></li>
             <li><a href="index.html#contacts">Контакты</a></li>
-            <li><button class="dark-mode-toggle" aria-label="Переключить тему">
-              <i class="fas fa-moon"></i>
-            </button></li>
+            <li>
+              <button class="dark-mode-toggle" aria-label="Переключить тему">
+                <i class="fas fa-moon"></i>
+              </button>
+            </li>
+            <li class="user-menu">
+              <a href="cabinet.html" class="user-avatar">
+                <i class="fas fa-user-circle"></i>
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -73,8 +81,6 @@
       <!-- ------------------------------------------------------ -->
       <div class="container">
         <h1 class="section-title">Выставки</h1>
-
-
 
         <!-- Фильтры -->
         <div class="exhibition-filters">
@@ -94,7 +100,7 @@
               />
             </div>
             <div class="exhibition-info">
-              <div class="exhibition-date">15 июня - 30 августа 2023</div>
+              <div class="exhibition-date">15 июня - 30 августа 2025</div>
               <h3 class="exhibition-title">Грани современности</h3>
               <div class="exhibition-artists">
                 Алексей Петров, Мария Смирнова, Джон Смит и другие
@@ -113,7 +119,7 @@
               <img src="./img/2 страничка диалог.jpg" alt="Безмолвный диалог" />
             </div>
             <div class="exhibition-info">
-              <div class="exhibition-date">1 июля - 15 сентября 2023</div>
+              <div class="exhibition-date">1 июля - 15 сентября 2025</div>
               <h3 class="exhibition-title">Безмолвный диалог</h3>
               <div class="exhibition-artists">София Леруа, Анна Ковалева</div>
               <p class="exhibition-description">
@@ -133,7 +139,7 @@
               />
             </div>
             <div class="exhibition-info">
-              <div class="exhibition-date">10 августа - 25 октября 2023</div>
+              <div class="exhibition-date">10 августа - 25 октября 2025</div>
               <h3 class="exhibition-title">Городские текстуры</h3>
               <div class="exhibition-artists">
                 Михаил Иванов, Карлос Санчес, Юлия Ветрова
@@ -155,7 +161,7 @@
               />
             </div>
             <div class="exhibition-info">
-              <div class="exhibition-date">5 сентября - 20 ноября 2023</div>
+              <div class="exhibition-date">5 сентября - 20 ноября 2025</div>
               <h3 class="exhibition-title">Формы времени</h3>
               <div class="exhibition-artists">
                 Олег Тернов, Елена Грачева, Жан-Люк Бернар
@@ -177,7 +183,7 @@
               />
             </div>
             <div class="exhibition-info">
-              <div class="exhibition-date">15 октября - 30 декабря 2023</div>
+              <div class="exhibition-date">15 октября - 30 декабря 2025</div>
               <h3 class="exhibition-title">Хроматические миры</h3>
               <div class="exhibition-artists">
                 Виктор Попов, Ирина Белова, Марко Джулиани
@@ -199,7 +205,7 @@
               />
             </div>
             <div class="exhibition-info">
-              <div class="exhibition-date">1 ноября 2023 - 15 января 2024</div>
+              <div class="exhibition-date">1 ноября 2023 - 15 января 2025</div>
               <h3 class="exhibition-title">Пространство жеста</h3>
               <div class="exhibition-artists">
                 Анна Морозова, Пьер Дюбуа, коллектив "Форма"
@@ -245,7 +251,7 @@
               />
             </div>
             <div class="exhibition-info">
-              <div class="exhibition-date">15 января - 1 апреля 2024</div>
+              <div class="exhibition-date">15 января - 1 апреля 2025</div>
               <h3 class="exhibition-title">Материя и цвет</h3>
               <div class="exhibition-artists">
                 Групповая выставка членов Академии художеств
@@ -267,7 +273,7 @@
               />
             </div>
             <div class="exhibition-info">
-              <div class="exhibition-date">10 марта - 30 июня 2024</div>
+              <div class="exhibition-date">10 марта - 30 июня 2025</div>
               <h3 class="exhibition-title">
                 Диалог эпох: рембрандтовский свет в современной живописи
               </h3>
@@ -278,7 +284,7 @@
                 Уникальный проект, исследующий влияние техники светотени
                 Рембрандта на современных художников. В экспозиции представлены:
               </p>
-              
+
               <a href="exhibition-detail.html" class="btn">Подробнее</a>
             </div>
           </div>
@@ -286,6 +292,351 @@
       </div>
     </main>
 
+    <!-- Модальное окно для выставки 1 -->
+    <div id="modal-1" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <img
+          src="https://images.unsplash.com/photo-1578926375605-eaf7559b1458?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+          alt="Грани современности"
+          class="modal-image"
+        />
+        <div class="modal-date">15 июня - 30 августа 2025</div>
+        <h3 class="modal-title">Грани современности</h3>
+        <div class="modal-artists">
+          Алексей Петров, Мария Смирнова, Джон Смит и другие
+        </div>
+        <p class="modal-description">
+          Крупнейшая выставка сезона представляет работы 25 современных
+          художников из 12 стран мира. Этот международный проект исследует
+          границы между традиционными и цифровыми медиа в современном искусстве,
+          демонстрируя как новые технологии влияют на художественное выражение.
+        </p>
+        <p>Экспозиция включает:</p>
+        <ul class="modal-features">
+          <li>
+            Интерактивные цифровые инсталляции с использованием VR-технологий
+          </li>
+          <li>Серия картин, созданных с применением нейросетей</li>
+          <li>3D-проекции классических произведений в новом прочтении</li>
+          <li>
+            Живые перформансы на стыке технологий и традиционного искусства
+          </li>
+        </ul>
+        <div class="modal-notes">
+          <p><strong>Место проведения:</strong> Главный зал галереи</p>
+          <p><strong>Экскурсии:</strong> Ежедневно в 12:00, 15:00 и 18:00</p>
+          <p><strong>Стоимость:</strong> 500 руб., льготный - 300 руб.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Модальное окно для выставки 2 -->
+    <div id="modal-2" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <img
+          src="./img/2 страничка диалог.jpg"
+          alt="Безмолвный диалог"
+          class="modal-image"
+        />
+        <div class="modal-date">1 июля - 15 сентября 2025</div>
+        <h3 class="modal-title">Безмолвный диалог</h3>
+        <div class="modal-artists">София Леруа, Анна Ковалева</div>
+        <p class="modal-description">
+          Уникальный проект двух выдающихся художниц современности, исследующий
+          диалог между скульптурой и фотографией. Выставка создает пространство
+          для немого разговора между двумя видами искусства, где каждая работа -
+          это реплика в этом диалоге.
+        </p>
+        <p>Особенности проекта:</p>
+        <ul class="modal-features">
+          <li>25 парных работ (фотография + скульптура)</li>
+          <li>
+            Специальная световая инсталляция, меняющая восприятие работ в
+            течение дня
+          </li>
+          <li>Зеркальный зал для полного погружения в концепцию</li>
+        </ul>
+        <div class="modal-notes">
+          <p><strong>Куратор:</strong> Ирина Владимирова</p>
+          <p><strong>Мастер-классы:</strong> Каждую субботу в 14:00</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Модальное окно для выставки 3 -->
+    <div id="modal-3" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <img
+          src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+          alt="Городские текстуры"
+          class="modal-image"
+        />
+        <div class="modal-date">10 августа - 25 октября 2025</div>
+        <h3 class="modal-title">Городские текстуры</h3>
+        <div class="modal-artists">
+          Михаил Иванов, Карлос Санчес, Юлия Ветрова
+        </div>
+        <p class="modal-description">
+          Мультидисциплинарный проект, исследующий урбанистическое пространство
+          через призму уличного искусства, текстильных инсталляций и звуковых
+          ландшафтов. Художники предлагают новое прочтение городской среды.
+        </p>
+        <ul class="modal-features">
+          <li>Серия граффити-эскизов в натуральную величину</li>
+          <li>Текстильные инсталляции из переработанных материалов</li>
+          <li>Интерактивная карта городских звуков</li>
+          <li>Видеопроекция "Город в движении"</li>
+        </ul>
+        <div class="modal-notes">
+          <p>
+            <strong>Партнеры:</strong> Фестиваль уличного искусства
+            "Стенограффия"
+          </p>
+          <p>
+            <strong>Особое событие:</strong> Ночь городского искусства 15
+            сентября
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Модальное окно для выставки 4 -->
+    <div id="modal-4" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <img
+          src="https://images.unsplash.com/photo-1565992441121-4367c2967103?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+          alt="Формы времени"
+          class="modal-image"
+        />
+        <div class="modal-date">5 сентября - 20 ноября 2025</div>
+        <h3 class="modal-title">Формы времени</h3>
+        <div class="modal-artists">
+          Олег Тернов, Елена Грачева, Жан-Люк Бернар
+        </div>
+        <p class="modal-description">
+          Международный проект трех известных скульпторов, исследующий концепцию
+          времени через пластические формы. От монументальных бронзовых
+          композиций до камерных мраморных работ - каждая скульптура
+          рассказывает свою историю о времени.
+        </p>
+        <ul class="modal-features">
+          <li>Центральная инсталляция "Хронос" высотой 3,5 метра</li>
+          <li>Серия "Моменты" из 12 мраморных скульптур</li>
+          <li>Интерактивная металлическая композиция "Песочные часы"</li>
+          <li>Видеодокументация процесса создания работ</li>
+        </ul>
+        <div class="modal-notes">
+          <p>
+            <strong>Материалы:</strong> бронза, мрамор, сталь, современные
+            композиты
+          </p>
+          <p>
+            <strong>Экскурсии с художниками:</strong> 12 сентября и 10 октября
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Модальное окно для выставки 5 -->
+    <div id="modal-5" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <img
+          src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+          alt="Хроматические миры"
+          class="modal-image"
+        />
+        <div class="modal-date">15 октября - 30 декабря 2025</div>
+        <h3 class="modal-title">Хроматические миры</h3>
+        <div class="modal-artists">
+          Виктор Попов, Ирина Белова, Марко Джулиани
+        </div>
+        <p class="modal-description">
+          Масштабная выставка современной живописи, где цвет становится главным
+          героем повествования. Три художника с разным культурным бэкграундом
+          исследуют возможности цвета в создании художественных миров.
+        </p>
+        <ul class="modal-features">
+          <li>Цикл "Цветовые вселенные" Виктора Попова</li>
+          <li>Серия "Нюансы" Ирины Беловой - 30 монохромных работ</li>
+          <li>Проект "Цвет и форма" Марко Джулиани</li>
+          <li>Интерактивная зона "Создай свою палитру"</li>
+        </ul>
+        <div class="modal-notes">
+          <p>
+            <strong>Лекционная программа:</strong> "Психология цвета" каждое
+            воскресенье
+          </p>
+          <p><strong>Для детей:</strong> Мастер-классы по смешиванию красок</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Модальное окно для выставки 6 -->
+    <div id="modal-6" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <img
+          src="https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+          alt="Пространство жеста"
+          class="modal-image"
+        />
+        <div class="modal-date">1 ноября 2025 - 15 января 2026</div>
+        <h3 class="modal-title">Пространство жеста</h3>
+        <div class="modal-artists">
+          Анна Морозова, Пьер Дюбуа, коллектив "Форма"
+        </div>
+        <p class="modal-description">
+          Инновационный проект, представляющий кинетические скульптуры и
+          инсталляции, реагирующие на движение зрителей. Выставка стирает
+          границы между искусством и зрителем, создавая уникальный опыт
+          взаимодействия.
+        </p>
+        <ul class="modal-features">
+          <li>Инсталляция "Танец ветра" с 50 подвижными элементами</li>
+          <li>Интерактивная скульптура "Отражение жеста"</li>
+          <li>Серия "Минимальные движения" Пьера Дюбуа</li>
+          <li>Коллективная работа "Флюидные формы"</li>
+        </ul>
+        <div class="modal-notes">
+          <p>
+            <strong>Технологии:</strong> Использованы датчики движения и
+            алгоритмы ИИ
+          </p>
+          <p>
+            <strong>Рекомендация:</strong> Посещать в удобной одежде,
+            позволяющей свободно двигаться
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Модальное окно для выставки 7 -->
+    <div id="modal-7" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <img
+          src="https://images.unsplash.com/photo-1578301978018-3005759f48f7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+          alt="Тихие диалоги"
+          class="modal-image"
+        />
+        <div class="modal-date">10 декабря 2025 - 25 февраля 2026</div>
+        <h3 class="modal-title">Тихие диалоги</h3>
+        <div class="modal-artists">Сергей Волков, Ольга Новикова</div>
+        <p class="modal-description">
+          Две персональные выставки в едином пространстве создают удивительный
+          диалог между двумя совершенно разными художественными манерами.
+          Абстрактные полотна Волкова и фигуративные работы Новиковой вступают в
+          визуальную беседу.
+        </p>
+        <ul class="modal-features">
+          <li>Цикл "Безмолвие" Сергея Волкова (15 крупноформатных работ)</li>
+          <li>Серия "Шепот" Ольги Новиковой (20 портретов)</li>
+          <li>Специальный зал "Точки пересечения"</li>
+          <li>Аудиогид с комментариями художников</li>
+        </ul>
+        <div class="modal-notes">
+          <p>
+            <strong>Формат:</strong> Выставка-размышление о природе
+            художественного диалога
+          </p>
+          <p>
+            <strong>Особое событие:</strong> Совместный перформанс художников 15
+            января
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Модальное окно для выставки 8 -->
+    <div id="modal-8" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <img
+          src="https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+          alt="Материя и цвет"
+          class="modal-image"
+        />
+        <div class="modal-date">15 января - 1 апреля 2026</div>
+        <h3 class="modal-title">Материя и цвет</h3>
+        <div class="modal-artists">
+          Групповая выставка членов Академии художеств
+        </div>
+        <p class="modal-description">
+          Крупнейший проект года, представляющий синтез скульптурных объектов и
+          живописных работ в едином выставочном пространстве. Классические
+          техники в современном прочтении от ведущих мастеров Академии
+          художеств.
+        </p>
+        <ul class="modal-features">
+          <li>50 работ 25 художников</li>
+          <li>Экспериментальные материалы и техники</li>
+          <li>Диалог между традицией и современностью</li>
+          <li>Специальный раздел "Новые имена"</li>
+        </ul>
+        <div class="modal-notes">
+          <p><strong>Каталог:</strong> Издан полноцветный каталог выставки</p>
+          <p><strong>Экскурсии:</strong> Проводят члены Академии художеств</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Модальное окно для выставки 9 -->
+    <div id="modal-9" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <img
+          src="https://i.pinimg.com/originals/18/bd/e4/18bde4fa6bb7074373fd69070c350470.jpg"
+          alt="Диалог эпох: рембрандтовский свет в современной живописи"
+          class="modal-image"
+        />
+        <div class="modal-date">10 марта - 30 июня 2026</div>
+        <h3 class="modal-title">
+          Диалог эпох: рембрандтовский свет в современной живописи
+        </h3>
+        <div class="modal-artists">
+          Клара Ван дер Хейден, Марк Таннери, Ольга Бережная, Юрий Голубев
+        </div>
+        <p class="modal-description">
+          Уникальный проект, исследующий влияние техники светотени Рембрандта на
+          современных художников. Выставка предлагает новый взгляд на наследие
+          старого мастера через призму современного искусства.
+        </p>
+        <ul class="modal-features">
+          <li>Точные копии фрагментов работ Рембрандта</li>
+          <li>Современные интерпретации световых решений</li>
+          <li>Мультимедийная инсталляция "Анатомия света"</li>
+          <li>Экспериментальные работы с традиционными техниками</li>
+          <li>Специальный раздел "Рембрандт и технологии"</li>
+        </ul>
+        <div class="modal-notes">
+          <p><strong>Куратор:</strong> Доктор искусствоведения А.К. Петров</p>
+          <p>
+            <strong>Программа:</strong> Цикл лекций о технике старых мастеров
+          </p>
+          <p><strong>Партнер:</strong> Рейксмюзеум (Амстердам)</p>
+        </div>
+      </div>
+    </div>
+    <!-- Модальное окно корзины -->
+    <div id="cart-modal" class="cart-modal">
+      <div class="cart-content">
+        <span class="cart-close">&times;</span>
+        <h2>Ваша корзина</h2>
+        <div class="cart-items" id="cart-items">
+          <!-- Товары будут добавляться сюда -->
+        </div>
+        <div class="cart-total">Итого: <span id="cart-total">0</span> руб.</div>
+        <div class="cart-actions">
+          <button class="btn-cancel" id="cancel-purchase">Отмена</button>
+          <button class="btn-buy" id="confirm-purchase">Оформить заказ</button>
+        </div>
+      </div>
+    </div>
     <!-- Подвал -->
     <footer>
       <div class="container">
@@ -348,5 +699,199 @@
         </div>
       </div>
     </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Фильтрация (оставьте ваш существующий код)
+
+        // Обработка модальных окон
+        const modalBtns = document.querySelectorAll(
+          '.btn[href="exhibition-detail.html"]'
+        );
+        const modals = document.querySelectorAll(".modal");
+        const closeBtns = document.querySelectorAll(".close-modal");
+
+        // Открытие модального окна
+        modalBtns.forEach((btn, index) => {
+          btn.addEventListener("click", function (e) {
+            e.preventDefault();
+            const modalId =
+              this.closest(".exhibition-card").getAttribute("data-type") +
+              "-" +
+              (index + 1);
+            const modal = document.getElementById("modal-" + (index + 1));
+            if (modal) {
+              modal.style.display = "block";
+              document.body.style.overflow = "hidden"; // Запрет прокрутки фона
+            }
+          });
+        });
+
+        // Закрытие модального окна
+        closeBtns.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            this.closest(".modal").style.display = "none";
+            document.body.style.overflow = "auto"; // Возврат прокрутки
+          });
+        });
+
+        // Закрытие при клике вне модального окна
+        window.addEventListener("click", function (e) {
+          if (e.target.classList.contains("modal")) {
+            e.target.style.display = "none";
+            document.body.style.overflow = "auto";
+          }
+        });
+
+        // Закрытие по ESC
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") {
+            modals.forEach((modal) => {
+              if (modal.style.display === "block") {
+                modal.style.display = "none";
+                document.body.style.overflow = "auto";
+              }
+            });
+          }
+        });
+      });
+      // Корзина
+      const cartModal = document.getElementById("cart-modal");
+      const cartItemsContainer = document.getElementById("cart-items");
+      const cartTotal = document.getElementById("cart-total");
+      const closeCart = document.querySelector(".cart-close");
+      const cancelPurchase = document.getElementById("cancel-purchase");
+      const confirmPurchase = document.getElementById("confirm-purchase");
+
+      let cart = [];
+      let ticketPrice = 500; // Базовая цена билета
+
+      // Добавление кнопки "Приобрести" в каждое модальное окно
+      document.querySelectorAll(".modal").forEach((modal) => {
+        const modalContent = modal.querySelector(".modal-content");
+        const buyBtn = document.createElement("button");
+        buyBtn.className = "btn-buy";
+        buyBtn.textContent = "Приобрести билет";
+        buyBtn.style.marginTop = "20px";
+        buyBtn.onclick = function () {
+          const exhibitionTitle =
+            modal.querySelector(".modal-title").textContent;
+          const exhibitionDate = modal.querySelector(".modal-date").textContent;
+          addToCart(exhibitionTitle, exhibitionDate);
+          modal.style.display = "none";
+          cartModal.style.display = "block";
+        };
+        modalContent.appendChild(buyBtn);
+      });
+
+      function addToCart(title, date) {
+        cart.push({
+          title: title,
+          date: date,
+          price: ticketPrice,
+          quantity: 1,
+        });
+        updateCart();
+      }
+
+      function updateCart() {
+        cartItemsContainer.innerHTML = "";
+        let total = 0;
+
+        cart.forEach((item, index) => {
+          const cartItem = document.createElement("div");
+          cartItem.className = "cart-item";
+          cartItem.innerHTML = `
+                    <div>
+                        <strong>${item.title}</strong><br>
+                        <small>${item.date}</small>
+                    </div>
+                    <div>
+                        ${item.price} руб. × 
+                        <input type="number" min="1" value="${item.quantity}" 
+                               style="width: 50px;" class="quantity-input" 
+                               data-index="${index}">
+                        = ${item.price * item.quantity} руб.
+                        <button class="remove-item" data-index="${index}">×</button>
+                    </div>
+                `;
+          cartItemsContainer.appendChild(cartItem);
+          total += item.price * item.quantity;
+        });
+
+        cartTotal.textContent = total;
+
+        // Обработчики для изменения количества и удаления
+        document.querySelectorAll(".quantity-input").forEach((input) => {
+          input.addEventListener("change", function () {
+            const index = this.dataset.index;
+            cart[index].quantity = parseInt(this.value);
+            updateCart();
+          });
+        });
+
+        document.querySelectorAll(".remove-item").forEach((btn) => {
+          btn.addEventListener("click", function () {
+            const index = this.dataset.index;
+            cart.splice(index, 1);
+            updateCart();
+          });
+        });
+      }
+
+      // Управление корзиной
+      closeCart.onclick = function () {
+        cartModal.style.display = "none";
+      };
+
+      cancelPurchase.onclick = function () {
+        cartModal.style.display = "none";
+      };
+
+      confirmPurchase.onclick = function () {
+        alert("Покупка оформлена! Билеты доступны в личном кабинете.");
+        cart = [];
+        updateCart();
+        cartModal.style.display = "none";
+
+        // Показываем страницу личного кабинета
+        document.getElementById("account-page").style.display = "block";
+      };
+
+      // Переключение между разделами личного кабинета
+      document.querySelectorAll(".account-nav a").forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          // Убираем активный класс у всех ссылок
+          document.querySelectorAll(".account-nav a").forEach((a) => {
+            a.classList.remove("active");
+          });
+
+          // Добавляем активный класс текущей ссылке
+          this.classList.add("active");
+
+          // Скрываем все разделы
+          document
+            .querySelectorAll("#profile-section, #tickets-section")
+            .forEach((section) => {
+              section.style.display = "none";
+            });
+
+          // Показываем нужный раздел
+          if (this.getAttribute("href") === "#profile") {
+            document.getElementById("profile-section").style.display = "block";
+          } else if (this.getAttribute("href") === "#tickets") {
+            document.getElementById("tickets-section").style.display = "block";
+          }
+        });
+      });
+
+      // Закрытие по клику вне модального окна
+      window.addEventListener("click", function (e) {
+        if (e.target === cartModal) {
+          cartModal.style.display = "none";
+        }
+      });
+    </script>
   </body>
 </html>

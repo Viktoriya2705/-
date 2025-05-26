@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#4285f4" />
+    <title>Личный кабинет | Галерея "Престиж"</title>
+    <link rel="icon" href="./img/Group 2.svg" type="image/svg+xml" />
+    <!-- Подключаем jQuery (необходим для Slick) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Подключаем Slick CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style/all.css" />
+    <link rel="stylesheet" href="./style/cabinet.css">
+  </head>
+  <body>
+    <!-- Шапка сайта -->
+    <header>
+      <div class="container header-container">
+        <a href="index.html" class="logo"
+          ><svg
+            class="logo__image"
+            width="160"
+            height="214"
+            viewBox="0 0 160 214"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              x="7.5"
+              y="7.5"
+              width="36"
+              height="199"
+              stroke="black"
+              stroke-width="15"
+            />
+            <line y1="7.5" x2="160" y2="7.5" stroke="black" stroke-width="15" />
+            <line
+              x1="152.5"
+              y1="214"
+              x2="152.5"
+              y2="3"
+              stroke="black"
+              stroke-width="15"
+            />
+          </svg>
+          РЕСТИЖ<span>.</span></a
+        >
+        
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <nav>
+          <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="index.html#about">О галерее</a></li>
+            <li><a href="exhibitions.html">Выставки</a></li>
+            <li><a href="artists.html">Художники</a></li>
+            <li><a href="index.html#events">Мероприятия</a></li>
+            <li><a href="blog.html">Блог</a></li>
+            <li><a href="index.html#contacts">Контакты</a></li>
+            <li>
+              <button class="dark-mode-toggle" aria-label="Переключить тему">
+                <i class="fas fa-moon"></i>
+              </button>
+            </li>
+            <li class="user-menu">
+              <a href="cabinet.html" class="user-avatar">
+                <i class="fas fa-user-circle"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Основное содержимое -->
+    <main class="account-container">
+      <div class="container">
+        <h1 class="section-title">Личный кабинет</h1>
+        
+        <div class="account-content">
+          <!-- Боковое меню -->
+          <aside class="account-sidebar">
+            <div class="user-profile">
+              <div class="user-avatar">
+                <i class="fas fa-user-circle"></i>
+              </div>
+              <h3 class="user-name">Александра Петрова</h3>
+              <p class="user-email">alexandra@example.com</p>
+            </div>
+            
+            <nav class="account-menu">
+              <ul>
+                <li><a href="#profile" class="active"><i class="fas fa-user"></i> Профиль</a></li>
+                <li><a href="#tickets"><i class="fas fa-ticket-alt"></i> Мои билеты</a></li>
+                <li><a href="#events"><i class="fas fa-calendar-alt"></i> Мои мероприятия</a></li>
+                <li><a href="#favorites"><i class="fas fa-heart"></i> Избранное</a></li>
+                <li><a href="#purchases"><i class="fas fa-shopping-bag"></i> Мои покупки</a></li>
+                <li><a href="#settings"><i class="fas fa-cog"></i> Настройки</a></li>
+                <li><a href="#logout"><i class="fas fa-sign-out-alt"></i> Выйти</a></li>
+              </ul>
+            </nav>
+          </aside>
+          
+          <!-- Основной контент -->
+          <div class="account-main">
+            <!-- Раздел профиля -->
+            <section id="profile" class="account-section active">
+              <h2>Мой профиль</h2>
+              <form class="profile-form">
+                <div class="form-group">
+                  <label for="name">Имя</label>
+                  <input type="text" id="name" value="Александра" required>
+                </div>
+                <div class="form-group">
+                  <label for="surname">Фамилия</label>
+                  <input type="text" id="surname" value="Петрова" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" value="alexandra@example.com" required>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Телефон</label>
+                  <input type="tel" id="phone" value="+7 (900) 123-45-67">
+                </div>
+                <div class="form-group">
+                  <label for="birthdate">Дата рождения</label>
+                  <input type="date" id="birthdate" value="1990-05-15">
+                </div>
+                <div class="form-group">
+                  <label>Подписка на рассылку</label>
+                  <div class="checkbox-group">
+                    <input type="checkbox" id="newsletter" checked>
+                    <label for="newsletter">Получать новости о выставках и мероприятиях</label>
+                  </div>
+                </div>
+                <button type="submit" class="btn">Сохранить изменения</button>
+              </form>
+            </section>
+            
+            <!-- Раздел билетов -->
+            <section id="tickets" class="account-section">
+              <h2>Мои билеты</h2>
+              <div class="tickets-list">
+                <div class="ticket-card">
+                  <div class="ticket-info">
+                    <h3>Выставка "Грани современности"</h3>
+                    <p class="ticket-date">15 июня 2025, 15:00</p>
+                    <p class="ticket-type">Стандартный билет</p>
+                    <p class="ticket-code">Код: PRESTIGE-2025-5678</p>
+                  </div>
+                  <div class="ticket-actions">
+                    <button class="btn btn-secondary">Скачать PDF</button>
+                    <button class="btn btn-outline">Отменить</button>
+                  </div>
+                </div>
+                
+                <div class="ticket-card past">
+                  <div class="ticket-info">
+                    <h3>Лекция "Искусство в цифровую эпоху"</h3>
+                    <p class="ticket-date">3 июля 2025, 19:00</p>
+                    <p class="ticket-type">Стандартный билет</p>
+                    <p class="ticket-code">Код: PRESTIGE-2025-8912</p>
+                  </div>
+                  <div class="ticket-actions">
+                    <button class="btn btn-secondary" disabled>Прошедшее мероприятие</button>
+                  </div>
+                </div>
+              </div>
+            </section>
+            
+            <!-- Раздел мероприятий -->
+            <section id="events" class="account-section">
+              <h2>Мои мероприятия</h2>
+              <div class="events-list">
+                <div class="event-card">
+                  <div class="event-image">
+                    <img src="./img/мк.jpg" alt="Мастер-класс">
+                  </div>
+                  <div class="event-info">
+                    <h3>Мастер-класс по абстрактной живописи</h3>
+                    <p class="event-date">25 июня 2025, 18:00</p>
+                    <p class="event-status">Подтверждено</p>
+                    <div class="event-actions">
+                      <button class="btn">Подробнее</button>
+                      <button class="btn btn-outline">Отменить участие</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            
+            <!-- Раздел избранного -->
+            <section id="favorites" class="account-section">
+              <h2>Избранное</h2>
+              <div class="favorites-grid">
+                <div class="favorite-item">
+                  <div class="favorite-image">
+                    <img src="https://images.unsplash.com/photo-1547891654-e66ed7ebb968?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Экскурсия">
+                  </div>
+                  <div class="favorite-info">
+                    <h3>Кураторская экскурсия по выставке</h3>
+                    <p>15 июля 2025</p>
+                    <div class="favorite-actions">
+                      <button class="btn">Забронировать</button>
+                      <button class="btn-icon"><i class="fas fa-heart"></i></button>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="favorite-item">
+                  <div class="favorite-image">
+                    <img src="https://images.unsplash.com/photo-1578926375605-eaf7559b1458?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Художник">
+                  </div>
+                  <div class="favorite-info">
+                    <h3>Иван Сидоров</h3>
+                    <p>Современный художник</p>
+                    <div class="favorite-actions">
+                      <button class="btn">Профиль</button>
+                      <button class="btn-icon"><i class="fas fa-heart"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            
+            <!-- Раздел покупок -->
+            <section id="purchases" class="account-section">
+              <h2>Мои покупки</h2>
+              <div class="purchases-list">
+                <div class="purchase-card">
+                  <div class="purchase-image">
+                    <img src="https://images.unsplash.com/photo-1551963831-b3b1ca40c98e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Картина">
+                  </div>
+                  <div class="purchase-info">
+                    <h3>"Городские огни"</h3>
+                    <p class="purchase-artist">Иван Сидоров, 2024</p>
+                    <p class="purchase-date">Приобретено: 12 мая 2025</p>
+                    <p class="purchase-price">45 000 ₽</p>
+                    <p class="purchase-status">Доставка: 20 июня 2025</p>
+                  </div>
+                  <div class="purchase-actions">
+                    <button class="btn btn-secondary">Детали доставки</button>
+                    <button class="btn btn-outline">Связаться с галереей</button>
+                  </div>
+                </div>
+              </div>
+            </section>
+            
+            <!-- Раздел настроек -->
+            <section id="settings" class="account-section">
+              <h2>Настройки аккаунта</h2>
+              <form class="settings-form">
+                <div class="form-group">
+                  <label>Безопасность</label>
+                  <button type="button" class="btn btn-outline">Изменить пароль</button>
+                </div>
+                
+                <div class="form-group">
+                  <label>Уведомления</label>
+                  <div class="checkbox-group">
+                    <input type="checkbox" id="notify-email" checked>
+                    <label for="notify-email">Email-уведомления</label>
+                  </div>
+                  <div class="checkbox-group">
+                    <input type="checkbox" id="notify-sms" checked>
+                    <label for="notify-sms">SMS-уведомления</label>
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label>Конфиденциальность</label>
+                  <div class="checkbox-group">
+                    <input type="checkbox" id="privacy-profile">
+                    <label for="privacy-profile">Скрыть профиль от других пользователей</label>
+                  </div>
+                </div>
+                
+                <div class="form-group danger-zone">
+                  <label>Опасная зона</label>
+                  <button type="button" class="btn btn-danger">Удалить аккаунт</button>
+                  <p class="danger-note">Это действие невозможно отменить. Все ваши данные будут удалены безвозвратно.</p>
+                </div>
+                
+                <button type="submit" class="btn">Сохранить настройки</button>
+              </form>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer>
+      <div class="container">
+        <div class="footer-container">
+          <div class="footer-col">
+            <h3>Галерея "Престиж"</h3>
+            <p>
+              Пространство современного искусства, где встречаются традиции и
+              инновации.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-telegram-plane"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h3>Разделы</h3>
+            <ul>
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="index.html#about">О галерее</a></li>
+              <li><a href="exhibitions.html">Выставки</a></li>
+              <li><a href="artists.html">Художники</a></li>
+              <li><a href="index.html#events">Мероприятия</a></li>
+              <li><a href="blog.html">Блог</a></li>
+              <li><a href="index.html#contacts">Контакты</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Контакты</h3>
+            <ul>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> Москва, ул. Артистов, д.
+                15;
+              </li>
+              <li><i class="fas fa-phone"></i> +7 (495) 123-45-67</li>
+              <li>
+                <i class="fas fa-envelope"></i> info@prestigeartgallery.ru
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Подписаться</h3>
+            <p>Получайте новости о выставках и мероприятиях</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Ваш email" />
+              <button type="submit" class="btn">OK</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <p>
+            &copy; 2025 Галерея современного искусства "Престиж". Все права
+            защищены.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script defer src="./js/script.js"></script>
+  </body>
+</html>
