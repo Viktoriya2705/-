@@ -1,0 +1,351 @@
+/* ======================= */
+/* === Глобальные стили === */
+/* ======================= */
+
+/* CSS-переменные для цветовой схемы */
+:root {
+  --primary: #000000;       /* Основной цвет (черный) */
+  --secondary: #ffffff;     /* Вторичный цвет (белый) */
+  --accent: #d4af37;        /* Акцентный цвет (золотой) */
+  --dark-accent: #0a2540;   /* Темный акцент (темно-синий) */
+  --text: #333333;          /* Основной цвет текста */
+  --light-gray: #f5f5f5;    /* Светло-серый фон */
+}
+
+/* Сброс стилей для всех элементов */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;   /* Учет padding и border в ширине элемента */
+  font-family: "Helvetica Neue", Arial, sans-serif; /* Основной шрифт */
+}
+
+/* Основные стили body */
+body {
+  color: var(--text);       /* Цвет текста по умолчанию */
+  line-height: 1.6;         /* Межстрочный интервал */
+}
+
+/* Стили для ссылок */
+a {
+  text-decoration: none;    /* Убираем подчеркивание */
+  color: var(--primary);    /* Цвет ссылок */
+   /* Плавные переходы */
+}
+
+a:hover {
+  color: var(--accent);     /* Цвет ссылок при наведении */
+}
+
+/* Основной контейнер для центрирования контента */
+.container {
+  width: 100%;
+  max-width: 1200px;       /* Максимальная ширина контента */
+  margin: 0 auto;          /* Центрирование по горизонтали */
+  padding: 0 20px;         /* Отступы по бокам */
+}
+
+/* Стили для кнопок */
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: var(--accent);  /* Золотой фон */
+  color: var(--primary);            /* Черный текст */
+  border: none;
+  border-radius: 4px;               /* Скругленные углы */
+  font-weight: 600;                /* Полужирный текст */
+  cursor: pointer;                 /* Курсор-указатель */
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--dark-accent); /* Темно-синий фон при наведении */
+  color: var(--secondary);              /* Белый текст при наведении */
+}
+
+/* Стили для заголовков секций */
+.section-title {
+  font-size: 2.5rem;               /* Крупный размер шрифта */
+  margin-bottom: 30px;             /* Отступ снизу */
+  position: relative;              /* Для псевдоэлемента */
+  padding-bottom: 15px;            /* Отступ для декоративной линии */
+  text-align: center;              /* Центрирование текста */
+}
+
+/* Декоративная линия под заголовком */
+.section-title:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);     /* Центрирование линии */
+  width: 80px;
+  height: 3px;
+  background-color: var(--accent); /* Золотой цвет линии */
+}
+
+/* ====================== */
+/* === Шапка сайта === */
+/* ====================== */
+
+header {
+  background-color: var(--secondary);  /* Белый фон */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для эффекта "плавающей" шапки */
+  position: fixed;                    /* Фиксированное позиционирование */
+  width: 100%;                       /* На всю ширину */
+  top: 0;                            /* Прижато к верху */
+  z-index: 1000;                     /* Поверх других элементов */
+}
+
+/* Контейнер для содержимого шапки */
+.header-container {
+  display: flex;
+  justify-content: space-between;    /* Распределение пространства между элементами */
+  align-items: center;               /* Вертикальное выравнивание по центру */
+  padding: 20px 0;                   /* Внутренние отступы */
+}
+
+/* Стили для логотипа */
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: 700;                  /* Жирное начертание */
+  color: var(--primary);             /* Черный цвет */
+  transition: all .3s ease-out;
+}
+
+.logo__image rect, .logo__image line {
+  transition-duration: .3s;
+}
+
+.logo:hover .logo__image rect,
+.logo:hover .logo__image line {
+  stroke: var(--accent);
+}
+
+.logo__image {
+  width: 24px;
+  height: 24px;
+}
+
+/* Акцентная часть логотипа */
+.logo span {
+  color: var(--accent);              /* Золотой цвет */
+}
+
+/* Стили для иконки (возможно, фото пользователя) */
+.photo {
+  height: 24px;
+  width: 24px;
+}
+
+/* ====================== */
+/* === Навигационное меню === */
+/* ====================== */
+
+/* Стили для списка навигации */
+nav ul {
+  display: flex;
+  list-style: none;                  /* Убираем маркеры списка */
+}
+
+/* Стили для пунктов меню */
+nav ul li {
+  margin-left: 30px;                 /* Отступ между пунктами */
+}
+
+/* Стили для ссылок в меню */
+nav ul li a {
+  font-weight: 500;                  /* Средняя жирность */
+  font-size: 1.1rem;                 /* Размер шрифта */
+}
+
+/* Кнопка мобильного меню (скрыта по умолчанию) */
+.mobile-menu-btn {
+  display: none;                     /* Скрыта на десктопах */
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+
+
+/* ====================== */
+/* === Подвал сайта === */
+/* ====================== */
+
+footer {
+  background-color: var(--primary);  /* Черный фон */
+  color: var(--secondary);          /* Белый текст */
+  padding: 50px 0 20px;   
+  margin-top: 50px;          /* Внутренние отступы (сверху, справа/слева, снизу) */
+}
+
+/* Контейнер для колонок подвала */
+.footer-container {
+  display: flex;
+  justify-content: space-between;    /* Распределение пространства между колонками */
+  margin-bottom: 40px;               /* Отступ снизу */
+}
+
+/* Колонка подвала */
+.footer-col {
+  flex: 1;                          /* Равномерное распределение пространства */
+  padding: 0 20px;                  /* Внутренние отступы по бокам */
+}
+
+/* Заголовок колонки */
+.footer-col h3 {
+  font-size: 1.3rem;                /* Размер шрифта */
+  margin-bottom: 20px;              /* Отступ снизу */
+  color: var(--accent);             /* Золотой цвет */
+}
+
+/* Список в колонке */
+.footer-col ul {
+  list-style: none;                 /* Убираем маркеры списка */
+}
+
+/* Элемент списка */
+.footer-col ul li {
+  margin-bottom: 10px;              /* Отступ снизу */
+}
+
+/* Ссылка в списке */
+.footer-col ul li a {
+  color: var(--secondary);          /* Белый цвет */
+}
+
+/* Ссылка при наведении */
+.footer-col ul li a:hover {
+  color: var(--accent);             /* Золотой цвет */
+}
+
+/* Социальные иконки */
+.social-links {
+  display: flex;
+  gap: 15px;                        /* Расстояние между иконками */
+}
+
+/* Ссылка-иконка */
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон */
+  border-radius: 50%;               /* Круглая форма */
+  color: var(--secondary);          /* Белый цвет */
+  font-size: 1.2rem;                /* Размер иконки */
+  transition: all 0.3s ease;        /* Плавные переходы */
+}
+
+/* Иконка при наведении */
+.social-links a:hover {
+  background-color: var(--accent);   /* Золотой фон */
+  color: var(--primary);            /* Черный цвет */
+}
+
+/* Копирайт в подвале */
+.copyright {
+  text-align: center;               /* Центрирование текста */
+  padding-top: 20px;                /* Отступ сверху */
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Разделительная линия */
+}
+
+/* ====================== */
+/* === Адаптивность === */
+/* ====================== */
+
+/* Планшеты (до 992px) */
+@media (max-width: 992px) {
+  /* Вертикальное расположение блоков в секциях */
+  .about-content,
+  .contacts-container {
+    flex-direction: column;
+  }
+
+  /* Отступ для изображения и карты */
+  .about-image,
+  .contact-map {
+    margin-top: 30px;
+  }
+
+  /* Перенос колонок подвала */
+  .footer-container {
+    flex-wrap: wrap;                /* Разрешаем перенос */
+  }
+
+  /* Ширина колонок подвала */
+  .footer-col {
+    flex: 0 0 50%;                  /* 2 колонки в ряд */
+    margin-bottom: 30px;            /* Отступ снизу */
+  }
+}
+
+/* Планшеты (до 768px) */
+@media (max-width: 768px) {
+  /* Показываем кнопку мобильного меню */
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  /* Стили для мобильного меню */
+  nav {
+    position: fixed;
+    top: 80px;
+    left: -100%;                    /* Скрыто за пределами экрана */
+    width: 100%;
+    height: calc(100vh - 80px);     /* На всю высоту минус шапка */
+    background-color: var(--secondary); /* Белый фон */
+    transition: all 0.3s ease;      /* Плавное появление */
+    z-index: 999;                   /* Поверх других элементов */
+  }
+
+  /* Класс для отображения меню */
+  nav.active {
+    left: 0;                        /* Показываем меню */
+  }
+
+  /* Вертикальное меню */
+  nav ul {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  /* Отступы для пунктов меню */
+  nav ul li {
+    margin: 15px 0;
+  }
+
+  /* Уменьшение размера заголовка */
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  /* Вертикальная форма подписки */
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  /* Одна колонка в подвале */
+  .footer-col {
+    flex: 0 0 100%;
+  }
+}
+
+/* Мобильные устройства (до 576px) */
+@media (max-width: 576px) {
+  /* Уменьшение размера заголовков секций */
+  .section-title {
+    font-size: 2rem;
+  }
+
+  /* Уменьшение размера заголовка баннера */
+  .hero h1 {
+    font-size: 2rem;
+  }
+}

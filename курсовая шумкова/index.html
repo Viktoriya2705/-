@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#4285f4" />
+    <title>Галерея современного искусства "Престиж"</title>
+    <link rel="icon" href="./img/Group 2.svg" type="image/svg+xml" />
+    <script defer src="./js/script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style/all.css">
+    <link rel="stylesheet" href="./style/index.css" />
+  </head>
+  <body>
+    <!-- Шапка сайта -->
+    <header>
+      <div class="container header-container">
+        <a href="index.html" class="logo"
+          ><svg
+            class="logo__image"
+            width="160"
+            height="214"
+            viewBox="0 0 160 214"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              x="7.5"
+              y="7.5"
+              width="36"
+              height="199"
+              stroke="black"
+              stroke-width="15"
+            />
+            <line y1="7.5" x2="160" y2="7.5" stroke="black" stroke-width="15" />
+            <line
+              x1="152.5"
+              y1="214"
+              x2="152.5"
+              y2="3"
+              stroke="black"
+              stroke-width="15"
+            />
+          </svg>
+          РЕСТИЖ<span>.</span></a
+        >
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <nav>
+          <ul>
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#about">О галерее</a></li>
+            <li><a href="exhibitions.html">Выставки</a></li>
+            <li><a href="artists.html">Художники</a></li>
+            <li><a href="#events">Мероприятия</a></li>
+            <li><a href="blog.html">Блог</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Главный баннер -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1>Выставка: "Грани современности"</h1>
+        <p>15 июня - 30 августа 2023</p>
+        <p>Работы 25 современных художников из 12 стран мира</p>
+        <a href="#exhibitions" class="btn">Подробнее</a>
+      </div>
+    </section>
+
+    <!-- О галерее -->
+    <section class="about" id="about">
+      <div class="container">
+        <h2 class="section-title">О галерее</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              Галерея современного искусства "Престиж" - это уникальное
+              пространство, где встречаются традиции и инновации, классика и
+              авангард. Основанная в 2010 году, наша галерея быстро завоевала
+              признание среди ценителей искусства.
+            </p>
+            <p>
+              Мы представляем работы как известных мастеров, так и молодых
+              талантливых художников, чье творчество отражает дух современности.
+              Наша миссия - делать современное искусство доступным и понятным
+              для каждого.
+            </p>
+            <p>
+              В наших залах регулярно проходят выставки, лекции, мастер-классы и
+              встречи с художниками. Мы сотрудничаем с ведущими музеями мира и
+              участвуем в международных арт-проектах.
+            </p>
+            <a href="#about" class="btn">Узнать больше</a>
+          </div>
+          <div class="about-video">
+            <video
+              width="100%"
+              height="auto"
+              autoplay
+              loop
+              poster="./img/главнаяя.jpeg"
+            >
+              <source
+                src="https://assets.mixkit.co/videos/41611/41611-360.mp4"
+                type="video/mp4"
+              />
+              Ваш браузер не поддерживает видео тег.
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- События -->
+    <section class="events" id="events">
+      <div class="container">
+        <h2 class="section-title">Ближайшие события</h2>
+        <div class="events-slider">
+          <div class="event-card">
+            <div class="event-image">
+              <img src="./img/мк.jpg" alt="Мастер-класс" />
+            </div>
+            <div class="event-info">
+              <div class="event-date">25 июня 2023</div>
+              <h3 class="event-title">Мастер-класс по абстрактной живописи</h3>
+              <p>Практическое занятие с художником Алексеем Петровым</p>
+            </div>
+          </div>
+
+          <div class="event-card">
+            <div class="event-image">
+              <img
+                src="https://images.unsplash.com/photo-1518991669955-9c7e78ec80ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Лекция"
+              />
+            </div>
+            <div class="event-info">
+              <div class="event-date">3 июля 2023</div>
+              <h3 class="event-title">Лекция: "Искусство в цифровую эпоху"</h3>
+              <p>Доклад искусствоведа Марии Смирновой о новых медиа</p>
+            </div>
+          </div>
+
+          <div class="event-card">
+            <div class="event-image">
+              <img
+                src="https://images.unsplash.com/photo-1547891654-e66ed7ebb968?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Экскурсия"
+              />
+            </div>
+            <div class="event-info">
+              <div class="event-date">15 июля 2023</div>
+              <h3 class="event-title">Кураторская экскурсия по выставке</h3>
+              <p>Авторский взгляд на экспозицию от куратора Анны Ковалевой</p>
+            </div>
+          </div>
+
+          <div class="event-card">
+            <div class="event-image">
+              <img
+                src="https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Детский мастер-класс"
+              />
+            </div>
+            <div class="event-info">
+              <div class="event-date">22 июля 2023</div>
+              <h3 class="event-title">Детский мастер-класс "Цвет и форма"</h3>
+              <p>Творческое занятие для детей 6-12 лет</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Форма подписки -->
+    <section class="newsletter">
+      <div class="container">
+        <h2 class="section-title">Подпишитесь на рассылку</h2>
+        <p>
+          Будьте в курсе новых выставок, мероприятий и специальных предложений
+        </p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Ваш email" required />
+          <button type="submit" class="btn">Подписаться</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="contacts" id="contacts">
+      <div class="container">
+        <h2 class="section-title">Контакты</h2>
+        <div class="contacts-container">
+          <div class="contact-info">
+            <h3>Галерея современного искусства "Престиж"</h3>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <p>Москва, ул. Артистов, д. 15</p>
+                <p>Бизнес-центр "Арт-Плаза", 3 этаж</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div>
+                <p>+7 (495) 123-45-67</p>
+                <p>+7 (926) 765-43-21</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <p>info@prestigeartgallery.ru</p>
+                <p>press@prestige-gallery.ru</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div>
+                <p><strong>Часы работы:</strong></p>
+                <p>Пн-Пт: 11:00 - 20:00</p>
+                <p>Сб-Вс: 11:00 - 19:00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.373789134755!2d37.61842331608678!3d55.75369699804049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5a738fa419%3A0x7c347d506f52311f!2z0JrRgNCw0YHQvdCw0Y8g0J_Qu9C-0YnQsNC00Yw!5e0!3m2!1sru!2sru!4v1623750000000!5m2!1sru!2sru"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+      <div class="container">
+        <div class="footer-container">
+          <div class="footer-col">
+            <h3>Галерея "Престиж"</h3>
+            <p>
+              Пространство современного искусства, где встречаются традиции и
+              инновации.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-telegram-plane"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h3>Разделы</h3>
+            <ul>
+              <li><a href="#home">Главная</a></li>
+              <li><a href="#about">О галерее</a></li>
+              <li><a href="exhibitions.html">Выставки</a></li>
+              <li><a href="artists.html">Художники</a></li>
+              <li><a href="#events">Мероприятия</a></li>
+              <li><a href="blog.html">Блог</a></li>
+              <li><a href="#contacts">Контакты</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Контакты</h3>
+            <ul>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> Москва, ул. Артистов, д.
+                15;
+              </li>
+              <li><i class="fas fa-phone"></i> +7 (495) 123-45-67</li>
+              <li>
+                <i class="fas fa-envelope"></i> info@prestigeartgallery.ru
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Подписаться</h3>
+            <p>Получайте новости о выставках и мероприятиях</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Ваш email" />
+              <button type="submit" class="btn">OK</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <p>
+            &copy; 2023 Галерея современного искусства "Престиж". Все права
+            защищены.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

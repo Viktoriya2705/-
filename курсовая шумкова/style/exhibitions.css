@@ -1,0 +1,258 @@
+
+/* Основной контент */
+main {
+    padding-top: 100px;
+    min-height: calc(100vh - 300px);
+}
+
+/* Фильтры выставок */
+.exhibition-filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 8px 20px;
+    background-color: var(--light-gray);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: var(--accent);
+    color: var(--primary);
+}
+
+/* Табы выставок */
+.exhibition-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--light-gray);
+    margin-bottom: 30px;
+}
+
+.tab-btn {
+    padding: 15px 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    font-weight: 600;
+}
+
+.tab-btn:after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--accent);
+    transition: width 0.3s ease;
+}
+
+.tab-btn.active:after, .tab-btn:hover:after {
+    width: 100%;
+}
+
+/* Список выставок */
+.exhibitions-list {
+    display: grid;
+    gap: 30px;
+}
+
+.exhibition-card {
+    display: flex;
+    background-color: var(--secondary);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.exhibition-image {
+    flex: 0 0 40%;
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.exhibition-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.exhibition-card:hover .exhibition-image img {
+    transform: scale(1.05);
+}
+
+.exhibition-info {
+    flex: 1;
+    padding: 30px;
+}
+
+.exhibition-date {
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.exhibition-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.exhibition-artists {
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.exhibition-description {
+    margin-bottom: 20px;
+}
+
+/* Подвал */
+footer {
+    background-color: var(--primary);
+    color: var(--secondary);
+    padding: 50px 0 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.footer-col {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer-col h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: var(--accent);
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: var(--secondary);
+}
+
+.footer-col ul li a:hover {
+    color: var(--accent);
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: var(--secondary);
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: var(--accent);
+    color: var(--primary);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+    .exhibition-card {
+        flex-direction: column;
+    }
+    
+    .exhibition-image {
+        flex: 0 0 auto;
+        max-height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    nav {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: var(--secondary);
+        transition: all 0.3s ease;
+        z-index: 999;
+    }
+    
+    nav.active {
+        left: 0;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        padding: 30px;
+    }
+    
+    nav ul li {
+        margin: 15px 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .exhibition-tabs {
+        flex-wrap: wrap;
+    }
+    
+    .tab-btn {
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .exhibition-filters {
+        gap: 10px;
+    }
+    
+    .filter-btn {
+        padding: 6px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .exhibition-info {
+        padding: 20px;
+    }
+}

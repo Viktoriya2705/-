@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#4285f4" />
+    <title>Галерея современного искусства "Престиж"</title>
+    <link rel="icon" href="./img/Group 2.svg" type="image/svg+xml" />
+    <script defer src="./js/script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style/all.css">
+    <link rel="stylesheet" href="./style/blog.css" />
+  </head>
+  <body>
+    <!-- Шапка сайта -->
+    <header>
+      <div class="container header-container">
+        <a href="index.html" class="logo"><img src="./img/Group 1.svg" alt="hbsh" class="photo">РЕСТИЖ<span>.</span></a>
+
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <nav>
+          <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="index.html#about">О галерее</a></li>
+            <li><a href="exhibitions.html">Выставки</a></li>
+            <li><a href="artists.html">Художники</a></li>
+            <li><a href="index.html#events">Мероприятия</a></li>
+            <li><a href="blog.html" class="active">Блог</a></li>
+            <li><a href="index.html#contacts">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main>
+      <div class="container">
+        <h1 class="section-title">Блог</h1>
+
+        <div class="blog-container">
+          <div class="blog-posts">
+            <!-- Пост 1 -->
+            <article class="blog-post">
+              <div class="post-image">
+                <img
+                  src="https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80"
+                  alt="Интервью с художником"
+                />
+              </div>
+              <div class="post-content">
+                <div class="post-meta">
+                  <span><i class="far fa-calendar"></i> 15 июня 2023</span>
+                  <span><i class="far fa-user"></i> Анна Ковалева</span>
+                </div>
+                <h2 class="post-title">
+                  Интервью с Алексеем Петровым: "Абстракция как язык души"
+                </h2>
+                <p class="post-excerpt">
+                  В преддверии открытия выставки "Грани современности" мы
+                  поговорили с одним из её участников - известным
+                  художником-абстракционистом Алексеем Петровым о его творческом
+                  пути, источниках вдохновения и отношении к цифровому
+                  искусству.
+                </p>
+                <a href="post-detail.html" class="btn">Читать далее</a>
+              </div>
+            </article>
+
+            <!-- Пост 2 -->
+            <article class="blog-post">
+              <div class="post-image">
+                <img
+                  src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                  alt="Тенденции современного искусства"
+                />
+              </div>
+              <div class="post-content">
+                <div class="post-meta">
+                  <span><i class="far fa-calendar"></i> 5 июня 2023</span>
+                  <span><i class="far fa-user"></i> Мария Смирнова</span>
+                </div>
+                <h2 class="post-title">
+                  Тенденции современного искусства в 2023 году
+                </h2>
+                <p class="post-excerpt">
+                  Какие направления и медиа будут определять арт-сцену в этом
+                  году? Наш искусствовед Мария Смирнова анализирует главные
+                  тренды - от экологичного искусства до нейросетевых
+                  экспериментов.
+                </p>
+                <a href="post-detail.html" class="btn">Читать далее</a>
+              </div>
+            </article>
+
+            <!-- Пост 3 -->
+            <article class="blog-post">
+              <div class="post-image">
+                <img
+                  src="https://images.unsplash.com/photo-1578301978018-3005759f48f7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                  alt="Детский мастер-класс"
+                />
+              </div>
+              <div class="post-content">
+                <div class="post-meta">
+                  <span><i class="far fa-calendar"></i> 25 мая 2023</span>
+                  <span><i class="far fa-user"></i> Юлия Ветрова</span>
+                </div>
+                <h2 class="post-title">
+                  Как говорить с детьми о современном искусстве?
+                </h2>
+                <p class="post-excerpt">
+                  Педагог и художник Юлия Ветрова делится советами, как
+                  познакомить детей с современным искусством без скучных лекций.
+                  И рассказывает о нашем новом проекте - детских мастер-классах
+                  "Цвет и форма".
+                </p>
+                <a href="post-detail.html" class="btn">Читать далее</a>
+              </div>
+            </article>
+
+            <!-- Пагинация -->
+            <div class="pagination">
+              <a href="#" class="page-link"
+                ><i class="fas fa-chevron-left"></i
+              ></a>
+              <a href="#" class="page-link active">1</a>
+              <a href="#" class="page-link">2</a>
+              <a href="#" class="page-link">3</a>
+              <a href="#" class="page-link"
+                ><i class="fas fa-chevron-right"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Сайдбар -->
+          <aside class="sidebar">
+            <div class="sidebar-widget">
+              <h3 class="widget-title">Категории</h3>
+              <ul class="categories-list">
+                <li>
+                  <a href="#">Интервью <span>(12)</span></a>
+                </li>
+                <li>
+                  <a href="#">Аналитика <span>(8)</span></a>
+                </li>
+                <li>
+                  <a href="#">События <span>(15)</span></a>
+                </li>
+                <li>
+                  <a href="#">История искусства <span>(5)</span></a>
+                </li>
+                <li>
+                  <a href="#">Советы коллекционерам <span>(7)</span></a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="sidebar-widget">
+              <h3 class="widget-title">Последние посты</h3>
+              <ul class="recent-posts">
+                <li class="recent-post">
+                  <div class="recent-post-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                      alt="Интервью"
+                    />
+                  </div>
+                  <div class="recent-post-title">
+                    <a href="#">Интервью с Алексеем Петровым</a>
+                  </div>
+                </li>
+                <li class="recent-post">
+                  <div class="recent-post-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                      alt="Тенденции"
+                    />
+                  </div>
+                  <div class="recent-post-title">
+                    <a href="#">Тенденции современного искусства</a>
+                  </div>
+                </li>
+                <li class="recent-post">
+                  <div class="recent-post-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1578301978018-3005759f48f7?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                      alt="Дети"
+                    />
+                  </div>
+                  <div class="recent-post-title">
+                    <a href="#">Как говорить с детьми об искусстве</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="sidebar-widget">
+              <h3 class="widget-title">Теги</h3>
+              <div class="tags">
+                <a href="#" class="tag">живопись</a>
+                <a href="#" class="tag">скульптура</a>
+                <a href="#" class="tag">фотография</a>
+                <a href="#" class="tag">инсталляции</a>
+                <a href="#" class="tag">интервью</a>
+                <a href="#" class="tag">аналитика</a>
+                <a href="#" class="tag">выставки</a>
+                <a href="#" class="tag">мастер-классы</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer>
+      <div class="container">
+        <div class="footer-container">
+          <div class="footer-col">
+            <h3>Галерея "Престиж"</h3>
+            <p>
+              Пространство современного искусства, где встречаются традиции и
+              инновации.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-telegram-plane"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h3>Разделы</h3>
+            <ul>
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="index.html#about">О галерее</a></li>
+              <li><a href="exhibitions.html">Выставки</a></li>
+              <li><a href="artists.html">Художники</a></li>
+              <li><a href="index.html#events">Мероприятия</a></li>
+              <li><a href="blog.html">Блог</a></li>
+              <li><a href="index.html#contacts">Контакты</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Контакты</h3>
+            <ul>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> Москва, ул. Артистов д.15
+              </li>
+              <li><i class="fas fa-phone"></i> +7 (495) 123-45-67</li>
+              <li>
+                <i class="fas fa-envelope"></i> info@prestigeartgallery.ru
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Подписаться</h3>
+            <p>Получайте новости о выставках и мероприятиях</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Ваш email" />
+              <button type="submit" class="btn">OK</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <p>
+            &copy; 2023 Галерея современного искусства "Престиж". Все права
+            защищены.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

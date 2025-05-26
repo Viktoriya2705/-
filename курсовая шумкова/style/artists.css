@@ -1,0 +1,290 @@
+
+/* ====================== */
+/* === Основной контент === */
+/* ====================== */
+
+main {
+  padding-top: 100px;                /* Отступ для фиксированной шапки */
+  min-height: calc(100vh - 300px);   /* Минимальная высота (100vh минус высота шапки и подвала) */
+}
+
+/* ====================== */
+/* === Фильтры художников === */
+/* ====================== */
+
+.artist-filters {
+  display: flex;
+  justify-content: center;           /* Центрирование фильтров */
+  gap: 15px;                        /* Расстояние между кнопками */
+  margin-bottom: 40px;              /* Отступ снизу */
+  flex-wrap: wrap;                  /* Перенос на новую строку при нехватке места */
+}
+
+/* Кнопка фильтра */
+.filter-btn {
+  padding: 8px 20px;
+  background-color: var(--light-gray); /* Светло-серый фон */
+  border: none;
+  border-radius: 20px;               /* Скругленные углы (форма "капсулы") */
+  cursor: pointer;                   /* Курсор-указатель */
+  transition: all 0.3s ease;        /* Плавные переходы */
+}
+
+/* Состояния кнопки фильтра */
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: var(--accent);   /* Золотой фон */
+  color: var(--primary);            /* Черный текст */
+}
+
+/* ====================== */
+/* === Сетка художников === */
+/* ====================== */
+
+.artists-grid {
+  display: grid;
+  /* Адаптивная сетка: автоматическое заполнение с минимальной шириной 280px */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;                        /* Расстояние между карточками */
+  margin-bottom: 50px;              /* Отступ снизу */
+}
+
+/* Карточка художника */
+.artist-card {
+  background-color: var(--secondary); /* Белый фон */
+  border-radius: 8px;               /* Скругленные углы */
+  overflow: hidden;                 /* Обрезка выходящего за границы контента */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Тень для объема */
+  transition: transform 0.3s ease;  /* Плавное перемещение */
+}
+
+/* Эффект при наведении на карточку */
+.artist-card:hover {
+  transform: translateY(-10px);     /* Поднимаем карточку на 10px */
+}
+
+/* Контейнер для изображения художника */
+.artist-image {
+  height: 300px;                    /* Фиксированная высота */
+  overflow: hidden;                 /* Обрезка выходящего за границы контента */
+}
+
+/* Изображение художника */
+.artist-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;                /* Заполнение контейнера с сохранением пропорций */
+  transition: transform 0.5s ease;  /* Плавное увеличение */
+}
+
+/* Эффект увеличения при наведении */
+.artist-card:hover .artist-image img {
+  transform: scale(1.05);           /* Увеличение на 5% */
+}
+
+/* Информация о художнике */
+.artist-info {
+  padding: 20px;                    /* Внутренние отступы */
+  text-align: center;               /* Центрирование текста */
+}
+
+/* Имя художника */
+.artist-name {
+  font-size: 1.3rem;                /* Размер шрифта */
+  margin-bottom: 5px;               /* Отступ снизу */
+}
+
+/* Страна художника */
+.artist-country {
+  color: var(--accent);             /* Золотой цвет */
+  font-weight: 600;                 /* Полужирное начертание */
+  margin-bottom: 10px;              /* Отступ снизу */
+}
+
+/* Стиль художника */
+.artist-style {
+  font-style: italic;               /* Курсивное начертание */
+  margin-bottom: 15px;              /* Отступ снизу */
+}
+
+/* ====================== */
+/* === Пагины === */
+/* ====================== */
+
+.pagination {
+  display: flex;
+  justify-content: center;          /* Центрирование пагинации */
+  gap: 10px;                        /* Расстояние между кнопками */
+  margin-top: 40px;                 /* Отступ сверху */
+  margin-bottom: 40px;              /* Отступ снизу */
+}
+
+/* Ссылка пагинации */
+.page-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;               /* Круглая форма */
+  background-color: var(--light-gray); /* Светло-серый фон */
+}
+
+/* Активная ссылка и состояние при наведении */
+.page-link.active,
+.page-link:hover {
+  background-color: var(--accent);   /* Золотой фон */
+  color: var(--primary);            /* Черный текст */
+}
+
+/* ====================== */
+/* === Подвал сайта === */
+/* ====================== */
+
+footer {
+  background-color: var(--primary);  /* Черный фон */
+  color: var(--secondary);          /* Белый текст */
+  padding: 50px 0 20px;             /* Внутренние отступы (сверху, справа/слева, снизу) */
+}
+
+/* Контейнер для колонок подвала */
+.footer-container {
+  display: flex;
+  justify-content: space-between;    /* Распределение пространства между колонками */
+  margin-bottom: 40px;               /* Отступ снизу */
+}
+
+/* Колонка подвала */
+.footer-col {
+  flex: 1;                          /* Равномерное распределение пространства */
+  padding: 0 20px;                  /* Внутренние отступы по бокам */
+}
+
+/* Заголовок колонки */
+.footer-col h3 {
+  font-size: 1.3rem;                /* Размер шрифта */
+  margin-bottom: 20px;              /* Отступ снизу */
+  color: var(--accent);             /* Золотой цвет */
+}
+
+/* Список в колонке */
+.footer-col ul {
+  list-style: none;                 /* Убираем маркеры списка */
+}
+
+/* Элемент списка */
+.footer-col ul li {
+  margin-bottom: 10px;              /* Отступ снизу */
+}
+
+/* Ссылка в списке */
+.footer-col ul li a {
+  color: var(--secondary);          /* Белый цвет */
+}
+
+/* Ссылка при наведении */
+.footer-col ul li a:hover {
+  color: var(--accent);             /* Золотой цвет */
+}
+
+/* Социальные иконки */
+.social-links {
+  display: flex;
+  gap: 15px;                        /* Расстояние между иконками */
+}
+
+/* Ссылка-иконка */
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон */
+  border-radius: 50%;               /* Круглая форма */
+  color: var(--secondary);          /* Белый цвет */
+  font-size: 1.2rem;                /* Размер иконки */
+  transition: all 0.3s ease;        /* Плавные переходы */
+}
+
+/* Иконка при наведении */
+.social-links a:hover {
+  background-color: var(--accent);   /* Золотой фон */
+  color: var(--primary);            /* Черный цвет */
+}
+
+/* Копирайт в подвале */
+.copyright {
+  text-align: center;               /* Центрирование текста */
+  padding-top: 20px;                /* Отступ сверху */
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Разделительная линия */
+}
+
+/* ====================== */
+/* === Адаптивность === */
+/* ====================== */
+
+/* Планшеты (до 768px) */
+@media (max-width: 768px) {
+  /* Показываем кнопку мобильного меню */
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  /* Стили для мобильного меню */
+  nav {
+    position: fixed;
+    top: 80px;
+    left: -100%;                    /* Скрыто за пределами экрана */
+    width: 100%;
+    height: calc(100vh - 80px);     /* На всю высоту минус шапка */
+    background-color: var(--secondary); /* Белый фон */
+    transition: all 0.3s ease;      /* Плавное появление */
+    z-index: 999;                   /* Поверх других элементов */
+  }
+
+  /* Класс для отображения меню */
+  nav.active {
+    left: 0;                        /* Показываем меню */
+  }
+
+  /* Вертикальное меню */
+  nav ul {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  /* Отступы для пунктов меню */
+  nav ul li {
+    margin: 15px 0;
+  }
+
+  /* Уменьшение размера заголовка */
+  .section-title {
+    font-size: 2rem;
+  }
+
+  /* Адаптация сетки художников */
+  .artists-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+/* Мобильные устройства (до 576px) */
+@media (max-width: 576px) {
+  /* Уменьшение размера заголовков секций */
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  /* Адаптация фильтров */
+  .artist-filters {
+    gap: 10px;                      /* Уменьшение расстояния между кнопками */
+  }
+
+  /* Уменьшение кнопок фильтров */
+  .filter-btn {
+    padding: 6px 15px;
+    font-size: 0.9rem;              /* Уменьшение размера шрифта */
+  }
+}

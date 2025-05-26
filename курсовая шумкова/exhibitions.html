@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#4285f4" />
+    <title>Галерея современного искусства "Престиж"</title>
+    <link rel="icon" href="./img/Group 2.svg" type="image/svg+xml" />
+    <script defer src="./js/script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style/all.css" />
+    <link rel="stylesheet" href="./style/exhibitions.css" />
+  </head>
+  <body>
+    <!-- Шапка сайта -->
+    <header>
+      <div class="container header-container">
+        <a href="index.html" class="logo"
+          ><svg
+            class="logo__image"
+            width="160"
+            height="214"
+            viewBox="0 0 160 214"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              x="7.5"
+              y="7.5"
+              width="36"
+              height="199"
+              stroke="black"
+              stroke-width="15"
+            />
+            <line y1="7.5" x2="160" y2="7.5" stroke="black" stroke-width="15" />
+            <line
+              x1="152.5"
+              y1="214"
+              x2="152.5"
+              y2="3"
+              stroke="black"
+              stroke-width="15"
+            />
+          </svg>
+          РЕСТИЖ<span>.</span></a
+        >
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <nav>
+          <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="index.html#about">О галерее</a></li>
+            <li><a href="exhibitions.html" class="active">Выставки</a></li>
+            <li><a href="artists.html">Художники</a></li>
+            <li><a href="index.html#events">Мероприятия</a></li>
+            <li><a href="blog.html">Блог</a></li>
+            <li><a href="index.html#contacts">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main>
+      <div class="container">
+        <h1 class="section-title">Выставки</h1>
+
+        <!-- Табы -->
+        <div class="exhibition-tabs">
+          <button class="tab-btn active">Текущие</button>
+          <button class="tab-btn">Предстоящие</button>
+          <button class="tab-btn">Архив</button>
+        </div>
+
+        <!-- Фильтры -->
+        <div class="exhibition-filters">
+          <button class="filter-btn active" data-filter="all">Все</button>
+          <button class="filter-btn" data-filter="painting">Живопись</button>
+          <button class="filter-btn" data-filter="sculpture">Скульптура</button>
+        </div>
+
+        <!-- Список выставок -->
+        <div class="exhibitions-list">
+          <!-- Выставка 1  - Живопись-->
+          <div class="exhibition-card">
+            <div class="exhibition-image">
+              <img
+                src="https://images.unsplash.com/photo-1578926375605-eaf7559b1458?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Грани современности"
+              />
+            </div>
+            <div class="exhibition-info">
+              <div class="exhibition-date">15 июня - 30 августа 2023</div>
+              <h3 class="exhibition-title">Грани современности</h3>
+              <div class="exhibition-artists">
+                Алексей Петров, Мария Смирнова, Джон Смит и другие
+              </div>
+              <p class="exhibition-description">
+                Крупнейшая выставка сезона представляет работы 25 современных
+                художников из 12 стран мира. Экспозиция исследует границы между
+                традиционными и цифровыми медиа в искусстве.
+              </p>
+              <a href="exhibition-detail.html" class="btn">Подробнее</a>
+            </div>
+          </div>
+
+          <!-- Выставка 2 - Живопись-->
+          <div class="exhibition-card">
+            <div class="exhibition-image">
+              <img src="./img/2 страничка диалог.jpg" alt="Безмолвный диалог" />
+            </div>
+            <div class="exhibition-info">
+              <div class="exhibition-date">1 июля - 15 сентября 2023</div>
+              <h3 class="exhibition-title">Безмолвный диалог</h3>
+              <div class="exhibition-artists">София Леруа, Анна Ковалева</div>
+              <p class="exhibition-description">
+                Диалог между скульптурой и фотографией в работах двух выдающихся
+                художниц нашего времени. Проект специально создан для галереи
+                "Престиж".
+              </p>
+              <a href="exhibition-detail.html" class="btn">Подробнее</a>
+            </div>
+          </div>
+
+          <!-- Выставка 3 - Живопись-->
+          <div class="exhibition-card">
+            <div class="exhibition-image">
+              <img
+                src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Городские текстуры"
+              />
+            </div>
+            <div class="exhibition-info">
+              <div class="exhibition-date">10 августа - 25 октября 2023</div>
+              <h3 class="exhibition-title">Городские текстуры</h3>
+              <div class="exhibition-artists">
+                Михаил Иванов, Карлос Санчес, Юлия Ветрова
+              </div>
+              <p class="exhibition-description">
+                Исследование урбанистического пространства через призму уличного
+                искусства и текстильных инсталляций. Выставка-размышление о
+                природе современного города.
+              </p>
+              <a href="exhibition-detail.html" class="btn">Подробнее</a>
+            </div>
+          </div>
+          <!-- Выставка 4 - Скульптура -->
+          <div class="exhibition-card">
+            <div class="exhibition-image">
+              <img
+                src="https://images.unsplash.com/photo-1565992441121-4367c2967103?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Формы времени"
+              />
+            </div>
+            <div class="exhibition-info">
+              <div class="exhibition-date">5 сентября - 20 ноября 2023</div>
+              <h3 class="exhibition-title">Формы времени</h3>
+              <div class="exhibition-artists">
+                Олег Тернов, Елена Грачева, Жан-Люк Бернар
+              </div>
+              <p class="exhibition-description">
+                Монументальные и камерные скульптуры из бронзы, мрамора и
+                современных материалов. Выставка исследует восприятие времени
+                через пластические формы.
+              </p>
+              <a href="exhibition-detail.html" class="btn">Подробнее</a>
+            </div>
+          </div>
+
+          <!-- Выставка 5 - Живопись -->
+          <div class="exhibition-card">
+            <div class="exhibition-image">
+              <img
+                src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Хроматические миры"
+              />
+            </div>
+            <div class="exhibition-info">
+              <div class="exhibition-date">15 октября - 30 декабря 2023</div>
+              <h3 class="exhibition-title">Хроматические миры</h3>
+              <div class="exhibition-artists">
+                Виктор Попов, Ирина Белова, Марко Джулиани
+              </div>
+              <p class="exhibition-description">
+                Масштабная выставка современной живописи, где цвет становится
+                главным героем повествования. От абстракций до фигуративных
+                композиций.
+              </p>
+              <a href="exhibition-detail.html" class="btn">Подробнее</a>
+            </div>
+          </div>
+
+          <!-- Выставка 6 - Скульптура -->
+          <div class="exhibition-card">
+            <div class="exhibition-image">
+              <img
+                src="https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Пространство жеста"
+              />
+            </div>
+            <div class="exhibition-info">
+              <div class="exhibition-date">1 ноября 2023 - 15 января 2024</div>
+              <h3 class="exhibition-title">Пространство жеста</h3>
+              <div class="exhibition-artists">
+                Анна Морозова, Пьер Дюбуа, коллектив "Форма"
+              </div>
+              <p class="exhibition-description">
+                Кинетические скульптуры и инсталляции, реагирующие на движение
+                зрителей. Интерактивная выставка, стирающая границы между
+                искусством и зрителем.
+              </p>
+              <a href="exhibition-detail.html" class="btn">Подробнее</a>
+            </div>
+          </div>
+
+          <!-- Выставка 7 - Живопись -->
+          <div class="exhibition-card">
+            <div class="exhibition-image">
+              <img
+                src="https://images.unsplash.com/photo-1578301978018-3005759f48f7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Тихие диалоги"
+              />
+            </div>
+            <div class="exhibition-info">
+              <div class="exhibition-date">
+                10 декабря 2023 - 25 февраля 2024
+              </div>
+              <h3 class="exhibition-title">Тихие диалоги</h3>
+              <div class="exhibition-artists">
+                Сергей Волков, Ольга Новикова
+              </div>
+              <p class="exhibition-description">
+                Две персональные выставки в одном пространстве. Живописные
+                полотна, вступающие в тонкий диалог между собой, несмотря на
+                разность стилей.
+              </p>
+              <a href="exhibition-detail.html" class="btn">Подробнее</a>
+            </div>
+          </div>
+
+          <!-- Выставка 8 - Скульптура и живопись -->
+          <div class="exhibition-card">
+            <div class="exhibition-image">
+              <img
+                src="https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Материя и цвет"
+              />
+            </div>
+            <div class="exhibition-info">
+              <div class="exhibition-date">15 января - 1 апреля 2024</div>
+              <h3 class="exhibition-title">Материя и цвет</h3>
+              <div class="exhibition-artists">
+                Групповая выставка членов Академии художеств
+              </div>
+              <p class="exhibition-description">
+                Синтез скульптурных объектов и живописных работ в едином
+                выставочном пространстве. Классические техники в современном
+                прочтении.
+              </p>
+              <a href="exhibition-detail.html" class="btn">Подробнее</a>
+            </div>
+          </div>
+          <!-- Выставка 9 - Живопись -->
+          <div class="exhibition-card">
+            <div class="exhibition-image">
+              <img
+                src="https://images.unsplash.com/photo-1578301978174-9ced228a338a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Диалог эпох: рембрандтовский свет в современной живописи"
+              />
+            </div>
+            <div class="exhibition-info">
+              <div class="exhibition-date">10 марта - 30 июня 2024</div>
+              <h3 class="exhibition-title">
+                Диалог эпох: рембрандтовский свет в современной живописи
+              </h3>
+              <div class="exhibition-artists">
+                Клара Ван дер Хейден, Марк Таннери, Ольга Бережная, Юрий Голубев
+              </div>
+              <p class="exhibition-description">
+                Уникальный проект, исследующий влияние техники светотени
+                Рембрандта на современных художников. В экспозиции представлены:
+              </p>
+              Кураторский проект доктора искусствоведения А.К. Петрова.
+
+              <div class="exhibition-notes">
+                <p>
+                  В рамках выставки запланированы мастер-классы и лекции по
+                  технике старых мастеров.
+                </p>
+              </div>
+              <a href="exhibition-detail.html" class="btn">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer>
+      <div class="container">
+        <div class="footer-container">
+          <div class="footer-col">
+            <h3>Галерея "Престиж"</h3>
+            <p>
+              Пространство современного искусства, где встречаются традиции и
+              инновации.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-telegram-plane"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h3>Разделы</h3>
+            <ul>
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="index.html#about">О галерее</a></li>
+              <li><a href="exhibitions.html">Выставки</a></li>
+              <li><a href="artists.html">Художники</a></li>
+              <li><a href="index.html#events">Мероприятия</a></li>
+              <li><a href="blog.html">Блог</a></li>
+              <li><a href="index.html#contacts">Контакты</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Контакты</h3>
+            <ul>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> Москва, ул. Артистов д.15
+              </li>
+              <li><i class="fas fa-phone"></i> +7 (495) 123-45-67</li>
+              <li>
+                <i class="fas fa-envelope"></i> info@prestigeartgallery.ru
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Подписаться</h3>
+            <p>Получайте новости о выставках и мероприятиях</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Ваш email" />
+              <button type="submit" class="btn">OK</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <p>
+            &copy; 2023 Галерея современного искусства "Престиж". Все права
+            защищены.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
